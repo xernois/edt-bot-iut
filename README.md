@@ -4,6 +4,3 @@
 - BAURI Antoine
 - DRON Jérémy
 - COLIN Romain
-- FETTER Léo
-- RATEL Alexandre
-- DELANIER Théau
