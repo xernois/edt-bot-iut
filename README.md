@@ -5,5 +5,6 @@ DRON Jérémy
 COLIN Romain
 =======
 FETTER Léo
+DELANIER Théau
 =======
 
