@@ -1,10 +1,13 @@
-const Discord = require('discord.js');                                             //Appelle du package pour faire le bot discord
+// Un tag ou mention est le fait de mentionner quelqu'un dans un message grâce au préfixe @, qui est en réalité un raccourci pour <@!idDeLaPersonne>
+// Un token est un numéro d'identification unique permettant la prise de contrôle d'un compte
+// client désigne le bot discord
+
+
+const Discord = require('discord.js');                                             //Appelle du module pour faire le bot discord
 const client = new Discord.Client();                                               //Création du bot
 const token = "NjExOTEyNjMxNzk1NzEyMDAw.XVauDA.GBKqcqOPSN6RBcc9PYZOeDADorc";       //Token du bot
 const clientMention = "<@!611912631795712000>";                                    //Mention du bot <@!idDeLaPersonneMentionnée>
 
-
-////////////////////// Client est le terme pour désigner un bot ////////////////////////
 client.on('ready', () => {                                //Quand le bot est connecté à discord
     console.log("Connecté en tant que : " + client.user.tag)        //On affiche dans la console qu'il est connecté en tant que + son nom
 });
@@ -63,4 +66,4 @@ function isAsked(Person, messageListened){                      //Si les premier
     return true;                                                                 
 }
 
-client.login(token) ;                                           //On se connecte avec le bot
+client.login(token) ;                                           //On se connecte avec le bot grâce au token pouvant permettre le contrôle
