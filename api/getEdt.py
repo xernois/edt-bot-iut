@@ -1,15 +1,6 @@
-import datetime, json, requests
-from pdf2image.exceptions import (
-    PDFInfoNotInstalledError,
-    PDFPageCountError,
-    PDFSyntaxError
-)
+import datetime, json, requests, pdf2image
 from selenium import webdriver                                                                          # import des webdrivers depuis la librairy selenium
 from selenium.webdriver.common import keys                                                              # 
-from pdf2image import convert_from_path
-
-
-import tempfile
 
 
 class Edt():                                                                                            # Definition de l'objet Edt qui a pour attribut un nom une date et une taille
@@ -24,14 +15,12 @@ class Edt():                                                                    
 
 def download_edt(file_name):
     print('je doit dl ' + file_name);
-    response = requests.get('http://edt-iut-info.unilim.fr/edt/' + file_name)
-    print(file_name.split('/')[1])
-    with open('edt/'+file_name.split('/')[1], 'wb') as f:
-        f.write(response.content)
-    pages = convert_from_path('edt/' + file_name.split('/')[1], 500)
+    print('http://edt-iut-info.unilim.fr/edt/' + file_name)
+    pdf = requests.get('http://edt-iut-info.unilim.fr/edt/' + file_name, stream=True)
+    pages = pdf2image.convert_from_bytes(pdf.raw.read())
     for page in pages:
-        page.save("test.jpg",'JPEG')
-
+        page.save('edt/'+file_name.split('/')[1].split('.')[0]+".jpg", 'JPEG')
+        # main.main('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
 
 
 def fetch_edt():                                                                                        # fonction pour recuperer tout les edts 
@@ -52,7 +41,7 @@ def fetch_edt():                                                                
                 date = datetime.datetime(date_edt[0],date_edt[1],date_edt[2],heure_edt[0],heure_edt[1]) # creation d'une date pour l'obj Edt
                 list_edt.append(Edt(info_edt[0], date, info_edt[3]))
                 try:
-                    with open('edt/' + info_edt[0].split('.')[0] + '.pdf') as f:
+                    with open('edt/' + info_edt[0].split('.')[0] + '.jpg') as f:
                         print("je suis la")
                 except IOError:
                     download_edt(info[0]+info_edt[0])
