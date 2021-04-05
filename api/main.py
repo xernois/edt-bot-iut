@@ -123,7 +123,7 @@ def engine(edtImage):
         else:
             compteurGr +=1
         
-    ecriture.ecrire(edt)
+    ecriture.ecrire(edt, edtImage)
 
 def main(edtImage):
     engine(edtImage)

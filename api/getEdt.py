@@ -1,16 +1,14 @@
-import datetime, json, requests, pdf2image, os
+import datetime, json, requests, pdf2image, os, main
 from selenium import webdriver                                                                          # import des webdrivers depuis la librairy selenium
 from selenium.webdriver.common import keys                                                              
 
 
 def download_edt(file_name):
-    print('je doit dl ' + file_name);
-    print('http://edt-iut-info.unilim.fr/edt/' + file_name)
     pdf = requests.get('http://edt-iut-info.unilim.fr/edt/' + file_name, stream=True)
     pages = pdf2image.convert_from_bytes(pdf.raw.read())
     for page in pages:
         page.save('edt/'+file_name.split('/')[1].split('.')[0]+".jpg", 'JPEG')
-        # main.main('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
+        main.main('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
         if os.path.exists('edt/'+file_name.split('/')[1].split('.')[0]+".jpg"):
             os.remove('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
 
@@ -39,4 +37,4 @@ def fetch_edt():                                                                
     driver.quit()                                                                                       # fermeture du driver
 
 
-fetch_edt()                                                                                            # appel de la fonction fetch_edt pour   
+fetch_edt()                                                                                             # appel de la fonction fetch_edt pour   

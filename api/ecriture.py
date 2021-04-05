@@ -6,8 +6,8 @@ import json
 # Entree: Le dictionnaire avec les donnees
 # Sortie: RIEN
 # =====================
-def ecrire(donnee):
-    with open('edt.json', 'w') as f:
+def ecrire(donnee, path):
+    with open(path.split('.')[0]+'.json', 'w') as f:
         json.dump(donnee,f, indent=2, ensure_ascii=False, sort_keys=False )
 
 
