@@ -1,72 +1,89 @@
 import flask, json
-from flask import jsonify, request
+from flask import jsonify, request, render_template, redirect
 from selenium import webdriver
 from selenium.webdriver.common import keys
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
-@app.route('/', methods=['GET'])
-def home():
-    return '''<u><h1>API EDT IUT</h1></u>
-    <ul>
-        <li>
-            <h3>liste des requetes faisables</h3>
-            <ul>
-            <li>/api/edt/a1       <i>(retourne le json de l'edt des a1)</i></li>
-            <li>/api/edt/a2       <i>(retourne le json de l'edt des a1)</i></li>
-            <li>/api/edt/a3       <i>(retourne le json de l'edt des a1)</i></li>
-            </ul>
-        </li>
-        <li>
-            <h3>liste des options</h3>
-            <ul>
-            <li>?s=X       <i>(retourne l'edt de la semaine X)</i></li>
-            </ul>
-        </li>
-    <ul>
-    '''
+semaine_defaut = 1
 
-    
+#######################################
+##                                   ##
+##            Fonctions              ##
+##                                   ##
+#######################################
+def fetch_groupe(data,group):
+    try: 
+        return data[list(data)[list(data).index(group)]]
+    except ValueError:
+        res = {}
+        for key in (list(data)):
+            if(key[:len(group)] == group):
+                res[key] = data[key]
+        return res if len(res) != 0 else "ce groupe n'existe pas"
+#######################################
+##                                   ##
+##        listes des routes          ##
+##                                   ##
+#######################################
+##route pour la page d'accueil
+@app.route('/', methods=['GET'])
+def home_page():
+    return render_template('index.html')
+##route pour la page de doc
+@app.route('/doc', methods=['GET'])
+def doc_page():
+    return render_template('doc.html')
+##redirection vers / quand la route n'existe pas
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect('/')
+#######################################
+##                                   ##
+##          routes pour A1           ##
+##                                   ##
+#######################################
 @app.route('/api/edt/a1', methods=['GET'])
 def edt_a1():
-    if request.args.get('s') == None:
-        semaine = 1
-    else:
-        semaine = request.args.get('s')
     try:
-        with open('edt/A1_S'+str(semaine)+'.json') as f:
+        with open('edt/A1_S'+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+'.json') as f:
             content = json.load(f)
     except IOError:
-        return 'L\'edt de la semaine '+str(semaine)+' n\'est pas disponible'
+        return 'L\'edt de la semaine '+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+' n\'est pas disponible'
+    if request.args.get('g') != None:
+        return fetch_groupe(content,request.args.get('g').upper())
     return content
-
+#######################################
+##                                   ##
+##          routes pour A2           ##
+##                                   ##
+#######################################
 @app.route('/api/edt/a2', methods=['GET'])
 def edt_a2():
-    if request.args.get('s') == None:
-        semaine = 1
-    else:
-        semaine = request.args.get('s')
     try:
-        with open('edt/A2_S'+str(semaine)+'.json') as f:
+        with open('edt/A2_S'+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+'.json') as f:
             content = json.load(f)
     except IOError:
-        return 'L\'edt de la semaine '+str(semaine)+' n\'est pas disponible'
+        return 'L\'edt de la semaine '+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+' n\'est pas disponible'
+    if request.args.get('g') != None:
+        return fetch_groupe(content,request.args.get('g').upper())
     return content
-
+#######################################
+##                                   ##
+##          routes pour A3           ##
+##                                   ##
+#######################################
 @app.route('/api/edt/a3', methods=['GET'])
 def edt_a3():
-    if request.args.get('s') == None:
-        semaine = 1
-    else:
-        semaine = request.args.get('s')
     try:
-        with open('edt/A3_S'+str(semaine)+'.json') as f:
+        with open('edt/A3_S'+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+'.json') as f:
             content = json.load(f)
     except IOError:
-        return 'L\'edt de la semaine '+str(semaine)+' n\'est pas disponible'
+        return 'L\'edt de la semaine '+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+' n\'est pas disponible'
+    if request.args.get('g') != None:
+        return fetch_groupe(content,request.args.get('g').upper())
     return content
-
 
 
 

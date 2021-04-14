@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            font-family: 'Arial Narrow Bold', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
+        
+        nav {
+            position: fixed;
+            width: 100%;
+            background: rgb(50, 50, 50);
+            color: white;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+        
+        nav ul {
+            width: 80%;
+            margin: 0 10%;
+        }
+        
+        nav ul li {
+            font-weight: bold;
+            font-size: 1.2em;
+            display: inline-block;
+            padding: 10px 20px;
+        }
+        
+        nav ul li:nth-child(n+2) {
+            float: right;
+        }
+        
+        nav ul li:nth-child(1) {
+            background-color: dodgerblue;
+        }
+        /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
+        
+        .sidebar {
+            --offsetY: 42px;
+            position: fixed;
+            background: lightgray;
+            height: calc(100vh - var(--offsetY));
+            width: 15%;
+            min-width: 250px;
+            margin-top: var(--offsetY);
+        }
+        /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
+        /*----------------------------------------------------*/
+        
+        main {
+            --offsetY: 42px;
+            margin-top: var(--offsetY);
+            margin-left: max(250px, 15%);
+            width: calc(100% - max(250px, 15%) - (2 * 50px));
+            padding: 50px;
+            min-height: calc(100vh - var(--offsetY) - (2 * 50px));
+        }
+        
+        main ul {
+            /* background-color: lightgrey; */
+            list-style-type: none;
+            padding: 0 20px;
+            font-size: .9em;
+        }
+        
+        main>ul {
+            border-left: 2px solid dodgerblue;
+        }
+        
+        main input[type="checkbox"] {
+            display: none;
+        }
+        
+        main input[type="checkbox"]~label::before {
+            display: inline-block;
+            font-weight: bolder;
+            margin-right: 30px;
+            content: ">";
+        }
+        
+        main input[type="checkbox"]:checked~label::before {
+            transform: rotate(90deg);
+        }
+        
+        main ul.hidden-default {
+            display: none;
+        }
+        
+        main input[type="checkbox"]:checked~ul {
+            display: block;
+            border-left: 2px solid dodgerblue;
+        }
+        
+        main ul li label {
+            display: block;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        main table {
+            width: 100%;
+            text-align: center;
+        }
+        
+        main table thead {
+            background: dodgerblue;
+            width: 100%;
+            font-size: large;
+            color: white;
+        }
+        
+        main table th,
+        main table td {
+            padding: 15px 10px;
+        }
+        
+        main table td {
+            font-size: 1.3em;
+        }
+        
+        main table tbody tr:nth-child(even) {
+            background: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">API EDT</a></li>
+            <li><a href="/doc">Documentation</a></li>
+            <li><a href="https://github.com/xernois/edt-bot-iut"> Github</a></li>
+        </ul>
+    </nav>
+    <div class="sidebar">
+
+    </div>
+    <main>
+        <ul>
+            <li>
+                <input type="checkbox" name="" id="edt">
+                <label for="edt">EDT</label>
+                <ul class="hidden-default">
+                    <li>
+                        <input type="checkbox" name="" id="a1">
+                        <label for="a1">A1</label>
+                        <ul class="hidden-default">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>variable</th>
+                                        <th>type</th>
+                                        <th>description</th>
+                                        <th>test</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>s</td>
+                                        <td>entier</td>
+                                        <td>permet de choisir une semaine specifique</td>
+                                        <td><a href="/api/edt/a1?s=3">/api/edt/a1?s=3</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>g</td>
+                                        <td>Chaine de caratères </td>
+                                        <td>permet de choisir un groupe specifique</td>
+                                        <td><a href="/api/edt/a1?g=g1">/api/edt/a1?g=g1</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="a2">
+                        <label for="a2">A2</label>
+                        <ul class="hidden-default">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">variable</th>
+                                        <th scope="col">type</th>
+                                        <th scope="col">description</th>
+                                        <th scope="col">test</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>s</td>
+                                        <td>entier</td>
+                                        <td>permet de choisir une semaine specifique</td>
+                                        <td><a href="/api/edt/a2?s=3">/api/edt/a2?s=3</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>g</td>
+                                        <td>Chaine de caratères </td>
+                                        <td>permet de choisir un groupe specifique</td>
+                                        <td><a href="/api/edt/a2?g=g4">/api/edt/a2?g=g4</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ul>
+                    </li>
+                    <li>
+                        <input type="checkbox" name="" id="a3">
+                        <label for="a3">A3</label>
+                        <ul class="hidden-default">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>variable</th>
+                                        <th>type</th>
+                                        <th>description</th>
+                                        <th>test</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>s</td>
+                                        <td>entier</td>
+                                        <td>permet de choisir une semaine specifique</td>
+                                        <td><a href="/api/edt/a3?s=3">/api/edt/a3?s=3</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>g</td>
+                                        <td>Chaine de caratères </td>
+                                        <td>permet de choisir un groupe specifique</td>
+                                        <td><a href="/api/edt/a3?g=l1">/api/edt/a3?g=l1</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </main>
+</body>
+
+</html>
