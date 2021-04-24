@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 fs = require("fs");
+const file = "./utilities/conf.json";
 
 module.exports.run = async (client, message, args) => {
-  const file = "./utilities/conf.json";
   let modify = JSON.parse(fs.readFileSync(file).toString());
   for (let firstArg in modify) {
     try {
@@ -13,7 +13,7 @@ module.exports.run = async (client, message, args) => {
         fs.writeFileSync(file, JSON.stringify(modify));
         delete require.cache[require.resolve("../utilities/conf.json")];
         message.channel.send(
-          `La caractéristique ${firstArg}, à été remplacé par   ${args[1]}`
+          `La caractéristique ${firstArg}, à été remplacé par ${args[1]}`
         );
         return;
       }
