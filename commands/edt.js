@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 
 module.exports.run = async (client, message, args) => {
   const clientConf = require("../utilities/conf.json");
-  console.log(message.channel.name);
 
   for (let chan in clientConf) {
     let a = message.channel.name;

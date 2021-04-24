@@ -7,8 +7,6 @@ module.exports.run = async (client, message, args) => {
   for (let firstArg in modify) {
     try {
       if (args[0] === firstArg) {
-        console.log(`/!\\ ${firstArg} will get replaced by ${args[1]}`);
-        console.log(modify);
         modify[firstArg] = args[1];
         fs.writeFileSync(file, JSON.stringify(modify));
         delete require.cache[require.resolve("../utilities/conf.json")];
@@ -28,5 +26,6 @@ module.exports.run = async (client, message, args) => {
 
 module.exports.conf = {
   name: "set",
+  permission: ["ADMINISTRATOR"],
   argsAllowed: 2,
 };

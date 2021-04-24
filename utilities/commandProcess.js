@@ -17,7 +17,17 @@ module.exports = (client, message, tagged) => {
   ) {
     let cmd;
     cmd = client.commands.get(firstCommand);
-    cmd.run(client, message, args);
+    console.log(cmd.conf["permission"]);
+    if (
+      !cmd.conf.hasOwnProperty("permission") ||
+      message.member.hasPermission(cmd.conf["permission"])
+    ) {
+      cmd.run(client, message, args);
+    } else {
+      message.channel.send(
+        "Vous n'avez pas la permission requise pour effectuer cette modification"
+      );
+    }
   } else {
     //Sinon c'est une commande inconnue et on retourne l'erreur
     message.channel.send("Ceci n'est pas une commande valide");

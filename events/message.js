@@ -11,10 +11,11 @@ module.exports = (client, message) => {
 
   let prefix = require("../utilities/conf.json").prefix;
 
-  console.log(`Prefix : ${prefix}`);
-
   tagged = isAsked(clientMention, message); //On met dans une variable, un booléen qui est le retour d'une fonction qui permet de voir si le bot est mentionné
-  if (message.content.startsWith(`${prefix}`) || tagged) {
+  if (
+    (message.content.startsWith(`${prefix}`) || tagged) &&
+    message.content.length > 2
+  ) {
     //Si il est mentionné ou que la première lettre du message est § alors
     commandProcess(client, message, tagged); //On rentre de la fonction commandProcess
   }
