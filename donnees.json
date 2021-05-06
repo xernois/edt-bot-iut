@@ -1,0 +1,13 @@
+{
+  "semaine": ["Semaine 1", "Semaine 2", "Semaine 3", "Semaine 4", "Semaine 5", "Semaine 6", "Semaine 7","Semaine 8","Semaine 9","Semaine 10",
+              "Semaine 11", "Semaine 12", "Semaine 13", "Semaine 14", "Semaine 15", "Semaine 16", "Semaine 17","Semaine 18","Semaine 19","Semaine 20",
+              "Semaine 21", "Semaine 22", "Semaine 23", "Semaine 24", "Semaine 25", "Semaine 26", "Semaine 27","Semaine 28","Semaine 29","Semaine 30",
+              "Semaine 31","Semaine 32","Semaine 33","Semaine 34","Semaine 35"],
+  "codeSemaine": ["edt1_S1","edt1_S2","edt1_S3","edt1_S4","edt1_S5","edt1_S6","edt1_S7","edt1_S8","edt1_S9","edt1_S10",
+                  "edt1_S11","edt1_S12","edt1_S13","edt1_S14","edt1_S15","edt1_S16","edt1_S17","edt1_S18","edt1_S19","edt1_S20",
+                  "edt1_S21","edt1_S22","edt1_S23","edt1_S24","edt1_S25","edt1_S26","edt1_S27","edt1_S28","edt1_S29","edt1_S30",
+                  "edt1_S31","edt1_S32","edt1_S33","edt1_S34","edt1_S35"],
+  "groupe": ["G1A","G1B","G2A","G2B","G3A","G3B","G4A","G4B","G5A","G5B"],
+  "jour": ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi"],
+  "heure":["  8h00","  8h30","  9h00","  9h30","10h00","10h30","11h00","11h30","12h00","12h30","13h00","13h30","14h00","14h30","15h00","15h30","16h00","16h30","17h00","17h30","18h00","18h30","19h00","19h30"]
+}
