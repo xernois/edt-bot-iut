@@ -33,8 +33,10 @@ class IHM:
     def erreurParametre(self, typeError):
         if typeError == "saisi":
             self.labelErreurParametre.config(text="Saisi des parametres invalides")
+            self.labelErreurParametre.place(x=15,y=107)
         if typeError == "incomplet":
             self.labelErreurParametre.config(text="Saisi des parametres incompletes")
+            self.labelErreurParametre.place(x=10,y=107)
         if typeError == "":
             self.labelErreurParametre.config(text="")
             self.majTitre()
@@ -43,13 +45,15 @@ class IHM:
             posY = 25
             indice = 0
             font = ("Calibri", 14)
-            print(" ===========================================================")
             if (edt15214!=False):
                 for i in donnees.data["heure"]:
                     posY += 20
-                    lbheure = ttk.Label(text=donnees.data["heure"][indice]+" - "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][indice]), font=font, background="#fff", foreground="#0a385a" )
+                    lbheure = ttk.Label(text=donnees.data["heure"][indice]+" - "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][indice])+"                                               ", font=font, background="#fff", foreground="#0a385a" )
                     lbheure.place(x=100, y=posY)
                     indice += 1
+            else:
+                self.labelErreurParametre.config(text="L'EDT saisi est introuvable")
+                self.labelErreurParametre.place(x=25,y=107)
             
 
     def majTitre(self):
