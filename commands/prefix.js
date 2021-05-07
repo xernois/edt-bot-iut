@@ -1,7 +1,6 @@
-const Discord = require("discord.js");
-const prefix = require("../utilities/conf.json").prefix;
+const prefix = require("../utilities/mainConf.json").prefix;
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (_client, message, _args) => {
   message.channel.send(`Le préfixe est : ${prefix}`);
 };
 

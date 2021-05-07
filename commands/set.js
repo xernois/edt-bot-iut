@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 fs = require("fs");
 const file = "./utilities/conf.json";
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (_client, message, args) => {
   let modify = JSON.parse(fs.readFileSync(file).toString());
   for (let firstArg in modify) {
     try {

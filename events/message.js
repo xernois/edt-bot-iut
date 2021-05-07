@@ -1,22 +1,19 @@
-const Discord = require("discord.js");
 const clientMention = "<@!611912631795712000>";
 const isAsked = require("../utilities/isAsked.js");
 const commandProcess = require("../utilities/commandProcess.js");
-const fs = require("fs");
 
 module.exports = (client, message) => {
   if (message.author == client.user || !message.channel.name) {
-    return; //il l'ignore
+    return;
   }
 
-  let prefix = require("../utilities/conf.json").prefix;
+  const prefix = require("../utilities/mainConf.json").prefix;
+  const tagged = isAsked(clientMention, message); 
 
-  tagged = isAsked(clientMention, message); //On met dans une variable, un booléen qui est le retour d'une fonction qui permet de voir si le bot est mentionné
-  if (
+   if (
     (message.content.startsWith(`${prefix}`) || tagged) &&
     message.content.length > 2
   ) {
-    //Si il est mentionné ou que la première lettre du message est § alors
-    commandProcess(client, message, tagged); //On rentre de la fonction commandProcess
+    commandProcess(client, message, tagged);
   }
 };

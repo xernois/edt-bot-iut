@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (_client, message, _args) => {
   const clientConf = require("../utilities/conf.json");
 
   for (let chan in clientConf) {
