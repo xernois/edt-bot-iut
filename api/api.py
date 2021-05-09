@@ -22,15 +22,29 @@ def fetch_groupe(data,group):
             if(key[:len(group)] == group):
                 res[key] = data[key]
         return res if len(res) != 0 else "ce groupe n'existe pas"
+
+
+def fetch_modules(data, module):
+    res = {}
+    for key in (list(data)):
+        for key2 in (list(data[key])):
+            if (key2 == module):
+                res[key2] = data[key][key2]
+                print(res)
+    return res if len(res) != 0 else "ce module n'existe pas"
+##param pour prendre les modules incomplets
+
+def fetch_modules_list(data, semestre):
+    res = {}
+    for key in (list(data)):
+        if(key == 'semestre '+str(semestre)):
+            res = data[key]
+    return res if len(res) != 0 else "ces modules n'existent pas"
 #######################################
 ##                                   ##
 ##        listes des routes          ##
 ##                                   ##
 #######################################
-##route pour la page d'accueil
-@app.route('/', methods=['GET'])
-def home_page():
-    return render_template('index.html')
 ##route pour la page de doc
 @app.route('/doc', methods=['GET'])
 def doc_page():
@@ -38,7 +52,7 @@ def doc_page():
 ##redirection vers / quand la route n'existe pas
 @app.errorhandler(404)
 def page_not_found(e):
-    return redirect('/')
+    return redirect('/doc')
 #######################################
 ##                                   ##
 ##          routes pour A1           ##
@@ -84,14 +98,23 @@ def edt_a3():
     if request.args.get('g') != None:
         return fetch_groupe(content,request.args.get('g').upper())
     return content
-
-
-
-
-
-
-
-
+#######################################
+##                                   ##
+##       routes pour MODULES         ##
+##                                   ##
+#######################################
+@app.route('/api/modules', methods=['GET'])
+def modules():
+    try:
+        with open('modules/modules.json', encoding='utf-8') as f:
+            content = json.load(f)
+    except IOError:
+        return 'Les modules ne sont pas disponible'
+    if request.args.get('m') != None:
+        return fetch_modules(content, request.args.get('m').upper())
+    if request.args.get('s') != None:
+        return fetch_modules_list(content, request.args.get('s').upper())
+    return content
 
 
 

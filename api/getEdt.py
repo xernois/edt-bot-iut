@@ -1,9 +1,16 @@
-import datetime, json, requests, pdf2image, os, main
+import json
+import requests
+import pdf2image
+import os
+import main
+import pathlib
+from datetime import datetime
 from selenium import webdriver                                                                          # import des webdrivers depuis la librairy selenium
-from selenium.webdriver.common import keys                                                              
+from selenium.webdriver.common import keys    
 
 
 def download_edt(file_name):
+    print(datetime.now().strftime("[%d/%m/%Y %H:%M:%S]"),'Download :', file_name)
     pdf = requests.get('http://edt-iut-info.unilim.fr/edt/' + file_name, stream=True)
     pages = pdf2image.convert_from_bytes(pdf.raw.read())
     for page in pages:
@@ -13,7 +20,8 @@ def download_edt(file_name):
             os.remove('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
 
 
-def fetch_edt():                                                                                        # fonction pour recuperer tout les edts 
+def fetch_edt():
+    print(datetime.now().strftime("[%d/%m/%Y %H:%M:%S]"),'============ Start fetching edts ============')
     driver = webdriver.Firefox(executable_path="C:\\browser_driver\\geckodriver.exe")                   # creation d'un nouveau driver pour naviguer sur internet
     driver.minimize_window()                                                                            # reduction du navigateuur pour pas le voir sur l'ecrans
     driver.get("http://edt-iut-info.unilim.fr/edt/")                                                    # recupere le contenu de la page internet
@@ -27,14 +35,14 @@ def fetch_edt():                                                                
                 info_edt = edts[j].text.split(" ")                                                      # le texte est couper pour en recuperer des données
                 date_edt = [int(data) for data in info_edt[1].split("-")]                               # recuperation des données correspondant a la date de publication
                 heure_edt = [int(data) for data in info_edt[2].split(":")]                              # recuperation des données correspondant a l'heure de publication
-                date = datetime.datetime(date_edt[0],date_edt[1],date_edt[2],heure_edt[0],heure_edt[1]) # creation d'une date pour l'obj Edt
+                date = datetime(date_edt[0],date_edt[1],date_edt[2],heure_edt[0],heure_edt[1]) # creation d'une date pour l'obj Edt
                 try:
                     with open('edt/' + info_edt[0].split('.')[0] + '.json') as f:
-                        pass
+                        if(datetime.fromtimestamp(pathlib.Path('edt/' + info_edt[0].split('.')[0] + '.json').stat().st_ctime) < date):
+                            download_edt(info[0]+info_edt[0])
                 except IOError:
                     download_edt(info[0]+info_edt[0])
             driver.back()                                                                               # le driver fais un retour en arriere pour revenir a la page avec la liste des dossier contenant les edts                                                                       # affichage du nom du repertoire contenant les edts                                                                             #
     driver.quit()                                                                                       # fermeture du driver
-
 
 fetch_edt()                                                                                             # appel de la fonction fetch_edt pour   

@@ -1,0 +1,63 @@
+{
+    "semestre 1":{
+        "M1101":"Introduction aux systèmes informatiques",
+        "M1102":"Introduction à l’algorithmique et à la programmation",
+        "M1103":"Structure de données et algorithmes fondamentaux",
+        "M1104":"Introduction aux bases de données",
+        "M1105":"Conception de documents et d’interfaces numériques",
+        "M1106":"Projet tutoré : découverte",
+        "M1201":"Mathématiques discrètes",
+        "M1202":"Algèbre linéaire",
+        "M1203":"Environnement économique",
+        "M1204":"Fonctionnement des organisations",
+        "M1205":"Fondamentaux de la communication",
+        "M1206":"Anglais et Informatique",
+        "M1207":"Connaître le monde professionnel"
+    },
+    "semestre 2":{
+        "M2101":"Architecture et Programmation des mécanismes de base d’un système informatique",
+        "M2102":"Architecture des réseaux",
+        "M2103":"Bases de la programmation orientée objet",
+        "M2104":"Bases de la conception orientée objet",
+        "M2105":"Introduction aux interfaces homme-machine",
+        "M2106":"Programmation et administration des bases de données",
+        "M2107":"Projet tutoré : Description et planification de projet",
+        "M2201":"Graphes et langages",
+        "M2202":"Analyse et méthodes numériques",
+        "M2203":"Environnement comptable, financier, juridique et social",
+        "M2204":"Gestion de projet informatique",
+        "M2205":"Communication, information et argumentation",
+        "M2206":"Communiquer en anglais",
+        "M2207":"PPP - Identifier ses compétences"
+    },
+    "semestre 3":{
+        "M3101":"Principes des systèmes d’exploitation",
+        "M3102":"Services réseaux",
+        "M3103":"Algorithmique avancée ",
+        "M3104":"Programmation Web côté serveur",
+        "M3105":"Conception et programmation objet avancées",
+        "M3106C":"Bases de données avancées",
+        "M3201":"Probabilités et statistique",
+        "M3202C":"Modélisations mathématiques",
+        "M3203":"Droit des technologies de l’information et de la communication",
+        "M3204":"Gestion des systèmes d’information",
+        "M3205":"Communication professionnelle",
+        "M3206":"Collaborer en anglais",
+        "M3301":"Méthodologie de la production d’applications",
+        "M3302":"Projet tutoré - Mise en situation professionnelle",
+        "M3303":"PPP - Préciser son projet"
+    },
+    "semestre 4":{
+        "M4101C":"Administration système et réseau",
+        "M4102C":"Programmation répartie",
+        "M4103C":"Programmation Web – client riche",
+        "M4104C":"Conception et développement d’applications mobiles",
+        "M4105C":"Compléments d’informatique en vue d’une insertion immédiate",
+        "M4106":"Projet tutoré – Compléments",
+        "M4201C":"Ateliers de création d’entreprise",
+        "M4202C":"Introduction à la recherche opérationnelle et aide à la décision",
+        "M4203":"Communication dans les organisations",
+        "M4204":"Travailler en anglais",
+        "M4301":"Stage professionnel"
+    }
+}

@@ -55,6 +55,7 @@ def getColor(codeColor, codeColor2,codeColor3,codeColor4, codeColor5):
 # Sortie: Rien
 # =====================
 def engine(edtImage, niveau):
+    print(edtImage)
     im = Image.open(edtImage)
     # imgScinde = ["fond1.jpg","fond2.jpg","fond3.jpg","fond4.jpg","fond5.jpg","fond6.jpg","fond7.jpg","fond8.jpg","fond9.jpg","fond10.jpg","fond11.jpg",
     # "fond12.jpg","fond13.jpg","fond14.jpg","fond15.jpg","fond16.jpg","fond17.jpg","fond18.jpg","fond19.jpg","fond20.jpg","fond21.jpg","fond22.jpg","fond23.jpg","fond24.jpg"]
@@ -357,14 +358,15 @@ def engine(edtImage, niveau):
             else:
                 compteurGr +=1
     if niveau == "A1":
-        ecriture.ecrire(edt1)
+        ecriture.ecrire(edt1, edtImage.split(".png")[0]+".json")
     if niveau == "A2":
-        ecriture.ecrire(edt2)
+        ecriture.ecrire(edt2, edtImage.split(".png")[0]+".json")
     if niveau == "A3":
-        ecriture.ecrire(edt3)
+        ecriture.ecrire(edt3, edtImage.split(".png")[0]+".json")
 
 def main(edtImage):
-    name = edtImage.split("_")
+    name = edtImage.split("/")[1].split("_")
+    print(name[0])
     if name[0] == "A1":
         engine(edtImage, "A1")
     if name[0] == "A2":
@@ -372,4 +374,4 @@ def main(edtImage):
     if name[0] == "A3":
         engine(edtImage, "A3")
 
-main("A1_S28.jpg")
+##main("A1_S28.jpg")
