@@ -6,4 +6,3 @@
 - COLIN Romain
 - FETTER Léo
 - RATEL Alexandre
-- DELANIER Théau
