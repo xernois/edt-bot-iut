@@ -26,6 +26,46 @@ class IHM:
     def containerEdt(self):
         txtFont = ("Calibri", 14, "bold")
         self.edt = Frame(self.fenetre, background="#fff",width=LARGEUR-LARGEUR_MENU, height=HAUTEUR)
+        self.lbheure1 = ttk.Label(background="#fff")
+        self.lbheure1.place(x=100, y=50)
+        self.lbheure2 = ttk.Label(background="#fff")
+        self.lbheure2.place(x=100, y=70)
+        self.lbheure3 = ttk.Label(background="#fff")
+        self.lbheure3.place(x=100, y=90)
+        self.lbheure4 = ttk.Label(background="#fff")
+        self.lbheure4.place(x=100, y=110)
+        self.lbheure5 = ttk.Label(background="#fff")
+        self.lbheure5.place(x=100, y=130)
+        self.lbheure6 = ttk.Label(background="#fff")
+        self.lbheure6.place(x=100, y=150)
+        self.lbheure7 = ttk.Label(background="#fff")
+        self.lbheure7.place(x=100, y=170)
+        self.lbheure8 = ttk.Label(background="#fff")
+        self.lbheure8.place(x=100, y=190)
+        self.lbheure9 = ttk.Label(background="#fff")
+        self.lbheure9.place(x=100, y=210)
+        self.lbheure10 = ttk.Label(background="#fff")
+        self.lbheure10.place(x=100, y=230)
+        self.lbheure11 = ttk.Label(background="#fff")
+        self.lbheure11.place(x=100, y=250)
+        self.lbheure12 = ttk.Label(background="#fff")
+        self.lbheure12.place(x=100, y=270)
+        self.lbheure13 = ttk.Label(background="#fff")
+        self.lbheure13.place(x=100, y=290)
+        self.lbheure14 = ttk.Label(background="#fff")
+        self.lbheure14.place(x=100, y=310)
+        self.lbheure15 = ttk.Label(background="#fff")
+        self.lbheure15.place(x=100, y=330)
+        self.lbheure16 = ttk.Label(background="#fff")
+        self.lbheure16.place(x=100, y=350)
+        self.lbheure17 = ttk.Label(background="#fff")
+        self.lbheure17.place(x=100, y=370)
+        self.lbheure18 = ttk.Label(background="#fff")
+        self.lbheure18.place(x=100, y=390)
+        self.lbheure19 = ttk.Label(background="#fff")
+        self.lbheure19.place(x=100, y=410)
+        self.lbheure20 = ttk.Label(background="#fff")
+        self.lbheure20.place(x=100, y=430)
         self.labelEdt = ttk.Label(self.edt, text="EDT",background="#fff", font=txtFont, foreground="#b10117")
         self.labelEdt.place(x=250,y=10)
         self.edt.place(x=0,y=0)
@@ -41,20 +81,69 @@ class IHM:
             self.labelErreurParametre.config(text="")
             self.majTitre()
             edt15214 = donnees.lecteurEDT(donnees.data["codeSemaine"], self.getIndice())
-            print(edt15214)
-            posY = 25
-            indice = 0
-            font = ("Calibri", 14)
+
+        try:
+            edt15214[self.getGroupe()]
+            erreur = False
+        except:
+            erreur = True
+
+        font = ("Calibri", 14)
+        if not erreur:
             if (edt15214!=False):
-                for i in donnees.data["heure"]:
-                    posY += 20
-                    lbheure = ttk.Label(text=donnees.data["heure"][indice]+" - "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][indice])+"                                               ", font=font, background="#fff", foreground="#0a385a" )
-                    lbheure.place(x=100, y=posY)
-                    indice += 1
+                self.lbheure1.config(text=self.afficheModule(0), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure2.config(text=self.afficheModule(1), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure3.config(text=self.afficheModule(2), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure4.config(text=self.afficheModule(3), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure5.config(text=self.afficheModule(4), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure6.config(text=self.afficheModule(5), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure7.config(text=self.afficheModule(6), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure8.config(text=self.afficheModule(7), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure9.config(text=self.afficheModule(8), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure10.config(text=self.afficheModule(9), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure11.config(text=self.afficheModule(10), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure12.config(text=self.afficheModule(11), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure13.config(text=self.afficheModule(12), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure14.config(text=self.afficheModule(13), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure15.config(text=self.afficheModule(14), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure16.config(text=self.afficheModule(15), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure17.config(text=self.afficheModule(16), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure18.config(text=self.afficheModule(17), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure19.config(text=self.afficheModule(18), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure20.config(text=self.afficheModule(19), font=font, background="#fff", foreground="#0a385a" )
             else:
-                self.labelErreurParametre.config(text="L'EDT saisi est introuvable")
+                self.labelErreurParametre.config(text="Parametre(s) un correct")
                 self.labelErreurParametre.place(x=25,y=107)
+        else:
+            self.lbheure1.config(text="", background="#fff")
+            self.lbheure2.config(text="", background="#fff")
+            self.lbheure3.config(text="", background="#fff")
+            self.lbheure4.config(text="", background="#fff")
+            self.lbheure5.config(text="", background="#fff")
+            self.lbheure6.config(text="", background="#fff")
+            self.lbheure7.config(text="", background="#fff")
+            self.lbheure8.config(text="", background="#fff")
+            self.lbheure9.config(text="", background="#fff")
+            self.lbheure10.config(text="", background="#fff")
+            self.lbheure11.config(text="", background="#fff")
+            self.lbheure12.config(text="", background="#fff")
+            self.lbheure13.config(text="", background="#fff")
+            self.lbheure14.config(text="", background="#fff")
+            self.lbheure15.config(text="", background="#fff")
+            self.lbheure16.config(text="", background="#fff")
+            self.lbheure17.config(text="", background="#fff")
+            self.lbheure18.config(text="", background="#fff")
+            self.lbheure19.config(text="", background="#fff")
+            self.lbheure20.config(text="", background="#fff")
+            self.labelErreurParametre.config(text="Parametre(s) un correct")
+            self.labelErreurParametre.place(x=25,y=107)
             
+    def afficheModule(self, index):
+        edt15214 = donnees.lecteurEDT(donnees.data["codeSemaine"], self.getIndice())
+        if str(edt15214[self.getGroupe()][self.getJour()]["Cours"][index][0]) != "":
+            return donnees.data["heure"][index]+" - "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][index][1])+" | "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][index][0])
+        else:
+            return donnees.data["heure"][index]+" - "
 
     def majTitre(self):
         titre = ("EDT - "+ self.getSemaine() +" , "+ self.getJour() +" , "+self.getGroupe())

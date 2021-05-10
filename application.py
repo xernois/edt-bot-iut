@@ -9,12 +9,7 @@ class Application:
     
     def validationMenu(self):
         semaineValide, jourValide, groupeValide, erreurSaisi = False, False, False, ""
-        print("================")
-        print("L'utilisateur a selectionné la semaine " + self.__semaine())
-        print("L'utilisateur a selectionné le jour " + self.__jour())
-        print("L'utilisateur a selectionné le groupe " + self.__groupe())
         if ((self.__semaine() == "Numero de la Semaine") or (self.__jour() == "Jour") or (self.__groupe() == "Nom du Groupe")):
-            print("Veuillez selectionner les tous les parametres")
             erreurSaisi = "incomplet"
             return ("incomplet")
         else:
@@ -33,7 +28,6 @@ class Application:
                     groupeValide = True
                     break
             if ((not semaineValide) or (not jourValide) or (not groupeValide)):
-                print("Une erreur de selection de parametre detecté")
                 erreurSaisi = "saisi"
                 return ("saisi")
         erreurSaisi = ""
@@ -43,7 +37,6 @@ class Application:
         posY = 25
         indice = 0
         font = ("Calibri", 14)
-        print(" ===========================================================")
         for i in donnees.data["heure"]:
             posY += 20
             lbheure = ttk.Label(text=donnees.data["heure"][indice]+" - "+edt[self.presentation.IHM.getGroupe()][self.presentation.IHM.getJour()]["Cours"][indice], font=font, background="#fff", foreground="#0a385a" )
