@@ -1,4 +1,4 @@
-const prefix = require("../utilities/mainConf.json").prefix;
+const prefix = require("../utilities/flexConf.json").prefix;
 
 module.exports.run = async (_client, message, _args) => {
   message.channel.send(`Le préfixe est : ${prefix}`);

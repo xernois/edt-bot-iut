@@ -1,0 +1,20 @@
+{
+  "prefix": "!",
+  "channelA1": "A1",
+  "channelA2": "A2",
+  "channelG1": "g1",
+  "channelG1A": "G1A",
+  "channelG1B": "G1B",
+  "channelG2": "G2",
+  "channelG2A": "G2A",
+  "channelG2B": "G2B",
+  "channelG3": "G3",
+  "channelG3A": "G3A",
+  "channelG3B": "G3B",
+  "channelG4": "G4",
+  "channelG4A": "G4A",
+  "channelG4B": "G4B",
+  "channelG5": "G5",
+  "channelG5A": "G5A",
+  "channelG5B": "G5B"
+}

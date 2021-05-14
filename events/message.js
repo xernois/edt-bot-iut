@@ -7,10 +7,10 @@ module.exports = (client, message) => {
     return;
   }
 
-  const prefix = require("../utilities/mainConf.json").prefix;
-  const tagged = isAsked(clientMention, message); 
+  const prefix = require("../utilities/flexConf.json").prefix;
+  const tagged = isAsked(clientMention, message);
 
-   if (
+  if (
     (message.content.startsWith(`${prefix}`) || tagged) &&
     message.content.length > 2
   ) {
