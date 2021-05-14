@@ -26,24 +26,24 @@ def intervalleCouleur(cdColor,borneInf, borneSup):
 # =====================
 def getColor(codeColor, codeColor2,codeColor3,codeColor4, codeColor5):
     if (intervalleCouleur(codeColor,(245, 226,245),(255,246,255)) or intervalleCouleur(codeColor2,(245, 226,245),(255,246,255)) or
-     intervalleCouleur(codeColor3,(245, 226,245),(255,246,255)) or intervalleCouleur(codeColor4,(245, 226,245),(255,246,255))or 
-     intervalleCouleur(codeColor5,(245, 226,245),(255,246,255))):
+        intervalleCouleur(codeColor3,(245, 226,245),(255,246,255)) or intervalleCouleur(codeColor4,(245, 226,245),(255,246,255))or 
+        intervalleCouleur(codeColor5,(245, 226,245),(255,246,255))):
         return "Rose"
     if (intervalleCouleur(codeColor,(235, 235,1),(255,255,60)) or intervalleCouleur(codeColor2,(235, 235,1),(255,255,60)) or
-     intervalleCouleur(codeColor3,(235, 235,1),(255,255,60)) or intervalleCouleur(codeColor4,(235, 235,1),(255,255,60)) or 
-     intervalleCouleur(codeColor5,(235, 235,1),(255,255,60))):
+        intervalleCouleur(codeColor3,(235, 235,1),(255,255,60)) or intervalleCouleur(codeColor4,(235, 235,1),(255,255,60)) or 
+        intervalleCouleur(codeColor5,(235, 235,1),(255,255,60))):
         return "Jaune"
     if (intervalleCouleur(codeColor,(235, 167,160),(255,207,200)) or intervalleCouleur(codeColor2,(235, 167,160),(255,207,200)) or
-     intervalleCouleur(codeColor3,(235, 167,160),(255,207,200)) or intervalleCouleur(codeColor4,(235, 167,160),(255,207,200)) or
-      intervalleCouleur(codeColor5,(235, 167,160),(255,207,200))):
+        intervalleCouleur(codeColor3,(235, 167,160),(255,207,200)) or intervalleCouleur(codeColor4,(235, 167,160),(255,207,200)) or
+        intervalleCouleur(codeColor5,(235, 167,160),(255,207,200))):
         return "Beige"
     if (intervalleCouleur(codeColor,(160, 235,235),(200,255,255)) or intervalleCouleur(codeColor2,(160, 235,235),(200,255,255)) or
-     intervalleCouleur(codeColor3,(160, 235,235),(200,255,255)) or intervalleCouleur(codeColor4,(160, 235,235),(200,255,255)) or 
-     intervalleCouleur(codeColor5,(160, 235,235),(200,255,255))):
+        intervalleCouleur(codeColor3,(160, 235,235),(200,255,255)) or intervalleCouleur(codeColor4,(160, 235,235),(200,255,255)) or 
+        intervalleCouleur(codeColor5,(160, 235,235),(200,255,255))):
         return "Bleu"
     if (intervalleCouleur(codeColor,(223, 42,147),(263,82,187)) or intervalleCouleur(codeColor2,(223, 42,147),(263,82,187)) or
-     intervalleCouleur(codeColor3,(223, 42,147),(263,82,187)) or intervalleCouleur(codeColor4,(223, 42,147),(263,82,187)) or
-      intervalleCouleur(codeColor4,(223, 42,147),(263,82,187))):
+        intervalleCouleur(codeColor3,(223, 42,147),(263,82,187)) or intervalleCouleur(codeColor4,(223, 42,147),(263,82,187)) or
+        intervalleCouleur(codeColor4,(223, 42,147),(263,82,187))):
         return "Violet"
     return "None"
 
@@ -55,7 +55,8 @@ def getColor(codeColor, codeColor2,codeColor3,codeColor4, codeColor5):
 # Sortie: Rien
 # =====================
 def engine(edtImage, niveau):
-    print(edtImage)
+    #print (edtImage)
+    module = ""
     im = Image.open(edtImage)
     # imgScinde = ["fond1.jpg","fond2.jpg","fond3.jpg","fond4.jpg","fond5.jpg","fond6.jpg","fond7.jpg","fond8.jpg","fond9.jpg","fond10.jpg","fond11.jpg",
     # "fond12.jpg","fond13.jpg","fond14.jpg","fond15.jpg","fond16.jpg","fond17.jpg","fond18.jpg","fond19.jpg","fond20.jpg","fond21.jpg","fond22.jpg","fond23.jpg","fond24.jpg"]
@@ -121,13 +122,13 @@ def engine(edtImage, niveau):
             if getColor(pipette1, pipette2, pipette3, pipette4, pipette5) == "Rose":
                 if niveau == "A1":
                     edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append(("",""))
-                    print(heure," - ", groupe1[compteurGr],jour[CompteurJr])
+                    #print (heure," - ", groupe1[compteurGr],jour[CompteurJr])
                 if niveau == "A2":
                     edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append(("",""))
-                    print(heure," - ", groupe2[compteurGr],jour[CompteurJr])
+                    #print (heure," - ", groupe2[compteurGr],jour[CompteurJr])
                 if niveau == "A3":
                     edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append(("",""))
-                    print(heure," - ", groupe3[compteurGr],jour[CompteurJr])
+                    #print (heure," - ", groupe3[compteurGr],jour[CompteurJr])
             else:
 # --------- Cours de CM
                 if getColor(pipette1, pipette2, pipette3, pipette4, pipette5) == "Jaune":
@@ -148,7 +149,7 @@ def engine(edtImage, niveau):
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "CM"))
                         else:
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, " - CM ", groupe1[compteurGr],jour[CompteurJr])
+                        #print (heure, " - CM ", groupe1[compteurGr],jour[CompteurJr])
                     if niveau == "A2":
                         if groupe2[compteurGr] == "G4A":
                             module = str(getModule.decoupeCM(edtImage, ecriture.pipetteCoordonnees[niveau]["X"][x], ecriture.pipetteCoordonnees[niveau]["Y"][y], niveau))
@@ -162,7 +163,7 @@ def engine(edtImage, niveau):
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "CM"))
                         else:
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, " - CM ", groupe2[compteurGr],jour[CompteurJr])
+                        #print (heure, " - CM ", groupe2[compteurGr],jour[CompteurJr])
                     if niveau == "A3":
                         if groupe3[compteurGr] == "L1A":
                             module = str(getModule.decoupeCM(edtImage, ecriture.pipetteCoordonnees[niveau]["X"][x], ecriture.pipetteCoordonnees[niveau]["Y"][y], niveau))
@@ -172,7 +173,7 @@ def engine(edtImage, niveau):
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "CM"))
                         else:
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, " - CM ", groupe3[compteurGr],jour[CompteurJr])
+                        #print (heure, " - CM ", groupe3[compteurGr],jour[CompteurJr])
 # ----- Cours de TD
                 elif getColor(pipette1, pipette2, pipette3, pipette4, pipette5) == "Beige":
                     if niveau == "A1":
@@ -192,7 +193,7 @@ def engine(edtImage, niveau):
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "TD"))
                         else:
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, " - TD", groupe1[compteurGr],jour[CompteurJr])
+                        #print (heure, " - TD", groupe1[compteurGr],jour[CompteurJr])
 
                     if niveau == "A2":
                         if groupe2[compteurGr] == "G4A":
@@ -207,7 +208,7 @@ def engine(edtImage, niveau):
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "TD"))
                         else:
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, " - TD", groupe2[compteurGr],jour[CompteurJr])
+                        #print (heure, " - TD", groupe2[compteurGr],jour[CompteurJr])
 
                     if niveau == "A3":
                         if groupe2[compteurGr] == "L1A":
@@ -218,7 +219,7 @@ def engine(edtImage, niveau):
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "TD"))
                         else:
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, " - TD", groupe3[compteurGr],jour[CompteurJr])
+                        #print (heure, " - TD", groupe3[compteurGr],jour[CompteurJr])
 
 # ------- Cours de TP
                 elif getColor(pipette1, pipette2, pipette3, pipette4, pipette5) == "Bleu":
@@ -239,7 +240,7 @@ def engine(edtImage, niveau):
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "TP"))
                         else:
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure,"- TP", groupe1[compteurGr],jour[CompteurJr])
+                        #print (heure,"- TP", groupe1[compteurGr],jour[CompteurJr])
 
                     if niveau == "A2":
                         if groupe2[compteurGr] == "G4A":
@@ -254,7 +255,7 @@ def engine(edtImage, niveau):
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "TP"))
                         else:
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure,"- TP", groupe2[compteurGr],jour[CompteurJr])
+                        #print (heure,"- TP", groupe2[compteurGr],jour[CompteurJr])
 
                     if niveau == "A3":
                         if groupe3[compteurGr] == "L1A":
@@ -265,7 +266,7 @@ def engine(edtImage, niveau):
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "TP"))
                         else:
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure,"- TP", groupe3[compteurGr],jour[CompteurJr])
+                        #print (heure,"- TP", groupe3[compteurGr],jour[CompteurJr])
 
 #  ------- Cours de partiel ------
                 elif getColor(pipette1, pipette2, pipette3, pipette4, pipette5) == "Violet":
@@ -286,7 +287,7 @@ def engine(edtImage, niveau):
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "Partiel"))
                         else:
                             edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, "- PARTIEL", groupe1[compteurGr],jour[CompteurJr])
+                        #print (heure, "- PARTIEL", groupe1[compteurGr],jour[CompteurJr])
 
                     if niveau == "A2":
                         if groupe2[compteurGr] == "G4A":
@@ -301,7 +302,7 @@ def engine(edtImage, niveau):
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "Partiel"))
                         else:
                             edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure, "- PARTIEL", groupe2[compteurGr],jour[CompteurJr])
+                        #print (heure, "- PARTIEL", groupe2[compteurGr],jour[CompteurJr])
 
                     if niveau == "A3":
                         if groupe3[compteurGr] == "L1A":
@@ -312,20 +313,20 @@ def engine(edtImage, niveau):
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append((module, "Partiel"))
                         else:
                             edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append(("", ""))
-                        print(heure," - PARTIEL ", groupe3[compteurGr],jour[CompteurJr])
+                        #print (heure," - PARTIEL ", groupe3[compteurGr],jour[CompteurJr])
 
                 elif getColor(pipette1, pipette2, pipette3, pipette4, pipette5) == "None":
                     if niveau == "A1":
                         edt1[groupe1[compteurGr]][jour[CompteurJr]]["Cours"].append("[ERROR: Pipette]")
-                        print(heure," - [ERROR: Pipette]", groupe1[compteurGr],jour[CompteurJr])
+                        #print (heure," - [ERROR: Pipette]", groupe1[compteurGr],jour[CompteurJr])
 
                     if niveau == "A2":
                         edt2[groupe2[compteurGr]][jour[CompteurJr]]["Cours"].append("[ERROR: Pipette]")
-                        print(heure," - [ERROR: Pipette]", groupe2[compteurGr],jour[CompteurJr])
+                        #print (heure," - [ERROR: Pipette]", groupe2[compteurGr],jour[CompteurJr])
 
                     if niveau == "A3":
                         edt3[groupe3[compteurGr]][jour[CompteurJr]]["Cours"].append("[ERROR: Pipette]")
-                        print(heure," - [ERROR: Pipette]", groupe3[compteurGr],jour[CompteurJr])
+                        #print (heure," - [ERROR: Pipette]", groupe3[compteurGr],jour[CompteurJr])
             h += 0.5
 
         if niveau == "A1":
@@ -358,15 +359,15 @@ def engine(edtImage, niveau):
             else:
                 compteurGr +=1
     if niveau == "A1":
-        ecriture.ecrire(edt1, edtImage.split(".png")[0]+".json")
+        ecriture.ecrire(edt1, edtImage.split(".jpg")[0]+".json")
     if niveau == "A2":
-        ecriture.ecrire(edt2, edtImage.split(".png")[0]+".json")
+        ecriture.ecrire(edt2, edtImage.split(".jpg")[0]+".json")
     if niveau == "A3":
-        ecriture.ecrire(edt3, edtImage.split(".png")[0]+".json")
+        ecriture.ecrire(edt3, edtImage.split(".jpg")[0]+".json")
 
 def main(edtImage):
-    name = edtImage.split("/")[1].split("_")
-    print(name[0])
+    name = edtImage.split("\\")[len(edtImage.split("\\")) - 1].split("_")
+    #print (name[0])
     if name[0] == "A1":
         engine(edtImage, "A1")
     if name[0] == "A2":

@@ -14,10 +14,10 @@ def download_edt(file_name):
     pdf = requests.get('http://edt-iut-info.unilim.fr/edt/' + file_name, stream=True)
     pages = pdf2image.convert_from_bytes(pdf.raw.read())
     for page in pages:
-        page.save('edt/'+file_name.split('/')[1].split('.')[0]+".jpg", 'JPEG')
-        main.main('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
-        if os.path.exists('edt/'+file_name.split('/')[1].split('.')[0]+".jpg"):
-            os.remove('edt/'+file_name.split('/')[1].split('.')[0]+".jpg")
+        page.save('D:\\dev\\edt-bot-iut\\api\\edt\\'+file_name.split('/')[1].split('.')[0]+".jpg", 'JPEG')
+        main.main('D:\\dev\\edt-bot-iut\\api\\edt\\'+file_name.split('/')[1].split('.')[0]+".jpg")
+        if os.path.exists('D:\\dev\\edt-bot-iut\\api\\edt\\'+file_name.split('/')[1].split('.')[0]+".jpg"):
+            os.remove('D:\\dev\\edt-bot-iut\\api\\edt\\'+file_name.split('/')[1].split('.')[0]+".jpg")
 
 
 def fetch_edt():
@@ -37,12 +37,12 @@ def fetch_edt():
                 heure_edt = [int(data) for data in info_edt[2].split(":")]                              # recuperation des données correspondant a l'heure de publication
                 date = datetime(date_edt[0],date_edt[1],date_edt[2],heure_edt[0],heure_edt[1]) # creation d'une date pour l'obj Edt
                 try:
-                    with open('edt/' + info_edt[0].split('.')[0] + '.json') as f:
-                        if(datetime.fromtimestamp(pathlib.Path('edt/' + info_edt[0].split('.')[0] + '.json').stat().st_ctime) < date):
+                    with open('D:\\dev\\edt-bot-iut\\api\\edt\\' + info_edt[0].split('.')[0] + '.json') as f:
+                        if(datetime.fromtimestamp(pathlib.Path('D:\\dev\\edt-bot-iut\\api\\edt\\' + info_edt[0].split('.')[0] + '.json').stat().st_ctime) < date):
                             download_edt(info[0]+info_edt[0])
                 except IOError:
                     download_edt(info[0]+info_edt[0])
             driver.back()                                                                               # le driver fais un retour en arriere pour revenir a la page avec la liste des dossier contenant les edts                                                                       # affichage du nom du repertoire contenant les edts                                                                             #
-    driver.quit()                                                                                       # fermeture du driver
+    driver.quit()                                                                                       # fermeture du driver  
 
-fetch_edt()                                                                                             # appel de la fonction fetch_edt pour   
+fetch_edt()

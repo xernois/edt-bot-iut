@@ -1,985 +1,1157 @@
 {
-  "G1A": {
+  "L1A": {
     "Lundi": {
       "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Mardi": {
       "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L050",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L080",
+          "CM"
+        ],
+        [
+          "[ML",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L080",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Mercredi": {
       "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
+        [
+          "L090",
+          "CM"
+        ],
+        [
+          "col\n",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Jeudi": {
       "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        ""
+        [
+          "L040",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L070",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L050",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Vendredi": {
       "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
+        [
+          "L040",
+          "TP"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L060",
+          "CM"
+        ],
+        [
+          "MIL",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Samedi": {
       "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     }
   },
-  "G1B": {
+  "L1B": {
     "Lundi": {
       "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Mardi": {
       "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L050",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L080",
+          "CM"
+        ],
+        [
+          "[ML",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Mercredi": {
       "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "col\n",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Jeudi": {
       "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L070",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L050",
+          "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Vendredi": {
       "Cours": [
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "L040",
+          "TP"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     },
     "Samedi": {
       "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-  "G2A": {
-    "Lundi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mardi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mercredi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Jeudi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Vendredi": {
-      "Cours": [
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Samedi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-  "G2B": {
-    "Lundi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mardi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mercredi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Jeudi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Vendredi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Samedi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-  "G3A": {
-    "Lundi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mardi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mercredi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Jeudi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Vendredi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Samedi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    }
-  },
-  "G3B": {
-    "Lundi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mardi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Mercredi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Jeudi": {
-      "Cours": [
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Vendredi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "[Travaux Pratique]",
-        "",
-        "",
-        "",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Cours Magistral]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "[Travaux Diriges]",
-        "",
-        "",
-        "",
-        ""
-      ]
-    },
-    "Samedi": {
-      "Cours": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ]
       ]
     }
   }
