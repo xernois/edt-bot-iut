@@ -1,8 +1,7 @@
 import flask, json
-import asyncio
 import time
 import atexit
-import getEdt
+#import getEdt
 from apscheduler.schedulers.background import BackgroundScheduler
 from flask import jsonify, request, render_template, redirect
 from selenium import webdriver
@@ -11,7 +10,6 @@ from selenium.webdriver.common import keys
 
 
 app = flask.Flask(__name__)
-app.config["DEBUG"] = True
 
 semaine_defaut = 1
 
@@ -127,6 +125,6 @@ def modules():
 # scheduler.add_job(func=getEdt.fetch_edt, trigger="interval", seconds=7200)
 # scheduler.start()
 
-app.run()
+app.run(debug=True, port=80, host='0.0.0.0')
 
 
