@@ -26,7 +26,7 @@ def fetch_groupe(data,group):
         for key in (list(data)):
             if(key[:len(group)] == group):
                 res[key] = data[key]
-        return res if len(res) != 0 else "ce groupe n'existe pas"
+        return json.dumps(res) if len(res) != 0 else "ce groupe n'existe pas"
 
 
 def fetch_modules(data, module):
@@ -36,7 +36,7 @@ def fetch_modules(data, module):
             if (key2 == module):
                 res[key2] = data[key][key2]
                 print(res)
-    return res if len(res) != 0 else "ce module n'existe pas"
+    return json.dumps(res) if len(res) != 0 else "ce module n'existe pas"
 ##param pour prendre les modules incomplets
 
 def fetch_modules_list(data, semestre):
@@ -53,7 +53,7 @@ def fetch_modules_list(data, semestre):
 ##route pour la page de doc
 @app.route('/doc', methods=['GET'])
 def doc_page():
-    return render_template('doc.html')
+    return render_template('Doc_API_125216.html')
 ##redirection vers / quand la route n'existe pas
 @app.errorhandler(404)
 def page_not_found(e):
@@ -66,13 +66,15 @@ def page_not_found(e):
 @app.route('/api/edt/a1', methods=['GET'])
 def edt_a1():
     try:
-        with open('edt/A1_S'+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+'.json') as f:
+        path = '/home/pi/edt-bot-iut/api/edt/A1_S'+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+'.json'
+        print(path)
+        with open('/home/pi/edt-bot-iut/api/edt/A1_S'+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+'.json', encoding='utf-8') as f:
             content = json.load(f)
     except IOError:
         return 'L\'edt de la semaine '+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+' n\'est pas disponible'
     if request.args.get('g') != None:
         return fetch_groupe(content,request.args.get('g').upper())
-    return content
+    return json.dumps(content)
 #######################################
 ##                                   ##
 ##          routes pour A2           ##
@@ -87,7 +89,7 @@ def edt_a2():
         return 'L\'edt de la semaine '+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+' n\'est pas disponible'
     if request.args.get('g') != None:
         return fetch_groupe(content,request.args.get('g').upper())
-    return content
+    return json.dumps(content)
 #######################################
 ##                                   ##
 ##          routes pour A3           ##
@@ -102,7 +104,7 @@ def edt_a3():
         return 'L\'edt de la semaine '+str(request.args.get('s') if request.args.get('s') != None else semaine_defaut)+' n\'est pas disponible'
     if request.args.get('g') != None:
         return fetch_groupe(content,request.args.get('g').upper())
-    return content
+    return json.dumps(content)
 #######################################
 ##                                   ##
 ##       routes pour MODULES         ##
@@ -119,7 +121,7 @@ def modules():
         return fetch_modules(content, request.args.get('m').upper())
     if request.args.get('s') != None:
         return fetch_modules_list(content, request.args.get('s').upper())
-    return content
+    return json.dumps(content)
 
 # scheduler = BackgroundScheduler()
 # scheduler.add_job(func=getEdt.fetch_edt, trigger="interval", seconds=7200)

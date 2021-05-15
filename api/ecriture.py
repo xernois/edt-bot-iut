@@ -7,7 +7,7 @@ import json
 # Sortie: RIEN
 # =====================
 def ecrire(donnee,nomFichier):
-    with open(nomFichier, 'w') as f:
+    with open(nomFichier, 'w', encoding="utf-8") as f:
         json.dump(donnee,f, indent=2, ensure_ascii=False, sort_keys=False )
 
 
