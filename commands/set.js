@@ -1,7 +1,25 @@
+const { Role } = require("discord.js");
+
 fs = require("fs");
 const file = "./utilities/conf.json";
 
 module.exports.run = async (_client, message, args) => {
+  const setter = args.shift();
+  switch (setter) {
+    case "prefix":
+      prefix(message, args);
+      break;
+    case "channel":
+      channel(message, args);
+      break;
+    case "role":
+      role(message, args);
+    default:
+      break;
+  }
+};
+
+function prefix(message, args) {
   let modify = JSON.parse(
     fs.readFileSync(`./utilities/flexConfig.json`).toString()
   );
@@ -23,10 +41,19 @@ module.exports.run = async (_client, message, args) => {
   message.channel.send(
     `Nous n'avons pas pu trouver votre argument dans la configuration actuelle`
   );
-};
+}
+
+function channel(message, args) {
+  const chan = args.shift();
+  const kind = args.shift();
+  console.log(chan);
+  console.log(kind);
+
+  // set channel A1 permission ADMINISTRATOR
+}
 
 module.exports.conf = {
   name: "set",
   permission: ["ADMINISTRATOR"],
-  argsAllowed: 2,
+  argsAllowed: 5,
 };
