@@ -1,5 +1,3 @@
-const Discord = require("discord.js");
-
 module.exports.run = async (client, message, args) => {
 	console.log(args.length);
 	if(args.length > 1){

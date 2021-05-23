@@ -1,4 +1,5 @@
 const { Role } = require("discord.js");
+const includeChannel = require("../utilities/includeChannel");
 
 fs = require("fs");
 const file = "./utilities/conf.json";
@@ -10,7 +11,7 @@ module.exports.run = async (_client, message, args) => {
       prefix(message, args);
       break;
     case "channel":
-      channel(message, args);
+      chan(message, args);
       break;
     case "role":
       role(message, args);
@@ -43,14 +44,19 @@ function prefix(message, args) {
   );
 }
 
-function channel(message, args) {
-  const chan = args.shift();
-  const kind = args.shift();
-  console.log(chan);
-  console.log(kind);
+/*  A finir
+
+function chan(message, args) {
+  channel = args.shift();
+  if(includeChannel(message, channel)){
+    message.channel.send(`Le salon ${channel.id} existe`);
+  }
+  else{ 
+    message.channel.send(`Le salon <#${channel}> n'existe pas`);
+  }
 
   // set channel A1 permission ADMINISTRATOR
-}
+}*/
 
 module.exports.conf = {
   name: "set",

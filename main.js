@@ -23,8 +23,9 @@ async function eventLoader(dir = "./events") {
       try {
         eventDir = require(path.join(__dirname, dir, file));
         client.on(event, eventDir.bind(null, client));
+        console.log(`${event} has loaded successfully`);
       } catch (err) {
-        throw new Error(`Error : ${err}`);
+        console.error(`Error : ${err}`);
       }
     }
   }
@@ -46,10 +47,17 @@ async function commandLoader(dir = "./commands") {
           client.commands.set(cmdMod.conf.name, cmdMod);
         }
       } catch (err) {
-        throw new Error(`Error : ${err}`);
+        console.error(`Error : ${err}`);
       }
     }
   }
   console.log(`=======| Commands have been loaded |========`);
 }
 commandLoader();
+
+async function edtChecker(){
+  while(1){
+    sleep(60 * 60 * 1000);
+    console.log(Wood)
+  }
+}
