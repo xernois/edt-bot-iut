@@ -3,28 +3,24 @@ const derniereSemaine = require("../utilities/flexConf.json").derniereSemaine;
 const edtFetch = require("../utilities/edtFetch.js");
 
 module.exports.run = async (_client, message, args) => {
-  const clientConf = require("../utilities/flexConf.json");
-    if(args.length == 1){
-        groupe = args.shift();
-        groups = ['1', '2', '3','4','5'];
-        if (`G${groupCheck(groupe, groups)}`){
-            console.log(groupe.substr(1,1));
-            if(groupe.substr(1,1) == 1 || groupe.substr(1,1) == 2 || groupe.substr(1,1) == 3){
-                edtFetch(1, groupe, derniereSemaine);
-            }
-            else if (groupe.substr(1,1) == 4 || groupe.substr(1,1) == 5){
-                edtFetch(2, groupe, derniereSemaine);
-            }
-        }
-        else {
-            message.channel.send("Groupe inexistant");
-        }
+
+  const groupe = args.shift();
+  
+  let semaine = derniereSemaine;
+  if(args.length == 1){
+    semaine = args.shift();
+  }
+    if(groupe.substr(1,1) == 1 || groupe.substr(1,1) == 2 || groupe.substr(1,1) == 3){
+        annee(message, 1, groupe, semaine);
+    }
+    else if (groupe.substr(1,1) == 4 || groupe.substr(1,1) == 5){
+        annee(message, 2, groupe, semaine);
     }
 };
 
 module.exports.conf = {
   name: "edt",
-  argsAllowed: 1,
+  argsAllowed: 2,
 };
 
 function groupCheck(groupe, groups) {
@@ -33,4 +29,28 @@ function groupCheck(groupe, groups) {
         if (a == i) return i;
     }
     return false;
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+  
+async function annee(message, annee, groupe, semaine){
+    edt = await edtFetch(annee, groupe, semaine)
+        .then((response) => response.json())
+        .then((response) => {return response});
+    console.log(edt);
+    try{
+        if(edt.hasOwnProperty('code')){
+            message.channel.send(`Èrreur ${edt.code} : ${edt.message}`)
+            console.log(`Èrreur ${edt.code} : ${edt.message}`);
+            return;
+        }
+        let cours = "";
+        edt.Lundi.Cours.forEach(element => {cours += ' ' + element});
+        message.channel.send(cours); //+ edt.Mardi.Cours + edt.Mercredi.Cours + edt.Jeudi.Cours + edt.Vendrerdi.Cours + edt.Samedi.Cours);
+    }
+    catch(err){
+        console.error(err);
+    }
 }

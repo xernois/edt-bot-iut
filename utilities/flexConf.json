@@ -1,6 +1,7 @@
 {
   "prefix": "!",
-  "derniereSemaine": 32,
+  "derniereSemaine": 35,
+  "semaineActuelle" : 32,
   "channelA1": "A1",
   "channelA2": "A2",
   "channelG1": "g1",
