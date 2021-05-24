@@ -1,0 +1,155 @@
+body{
+    background: #eeeeee;
+}
+
+/* ============== Headre ===================== */
+/* --- Titre ---- */
+.titre{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    color: #B51621;
+    font-weight: bolder;
+    font-size:4em;
+    text-shadow: 0px 5px 5px #540A11;
+    font-family: Verdana;
+}
+#git a{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    font-family: Verdana;
+    color: #78809A;
+}
+img{
+    position: absolute;
+    max-width: 10vw;
+}
+/* --- Menu --- */
+nav{
+    width: 100%;
+    border: 3px solid #B51621;
+    background-color: #B51621;
+    box-shadow: 5px 5px 5px #78809A;
+    
+}
+nav ul li{
+    box-sizing: border-box;
+    display: inline-block;
+    width: 33%;
+    text-align: center;
+}
+nav ul .li{
+    border-right: solid 4px white;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-family: verdana;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+    color: #E5E5E5;
+}
+/* ========================== Container ====================== */
+
+#container{
+    margin: 5% 10% 15% 10%;
+    padding: 3%;
+    background-color: white;
+    border-radius: 10px;
+    font-family: Verdana;
+    color: #78809A;
+    box-shadow: 5px 5px 5px #78809A;
+}
+#container #A1, #A2, #A3{
+    text-align: center;
+    width: 100%;
+}
+
+#container p{
+    text-align: justify;
+}
+/*  --- Tableaux --- */
+table{
+    width: 80%;
+    margin: 10px 0 10px 10%;
+    color: #78809A;
+}
+#container th{
+    background-color:  #B51621;
+    color: white;
+    font-family: verdana;
+    padding: 5px;
+}
+#container td{
+    box-sizing: border-box;
+    text-align: center;
+    padding: 5px;
+    background-color: #eeeeee;
+    color: #78809A;
+    border-bottom: solid 3px white;
+}
+
+/* ============== Footer ============ */
+footer{
+    background-color: #B51621; 
+    
+    box-shadow: 5px 5px 5px #78809A;
+}
+#bas-page h3, #bas-page a{
+    padding: 5px;
+    text-align: center;
+    font-family: verdana;
+    color: white;
+}
+#mention{
+    display: none;
+}
+.screen-mobile{
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+/* ========= Webkit scrollbar ========= */
+::-webkit-scrollbar{
+    background: #eeeeee;
+    width: 14px;
+}
+  
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 10px #eeeeee;
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb{
+    background: #B51621;
+    /* border-radius: 40px; */
+}
+
+@media only screen and (max-width: 860px) {
+    .screen-mobile{
+        top: 0;
+        left: 0;
+        display: block;
+        position: fixed;
+        z-index: 100;
+        background: #eeeeee;
+    }
+    .screen-mobile h2{
+        font-family: verdana;
+        font-weight: bold;
+        color: #B51621;
+        text-align: center;
+        margin-top: 150px;
+    }
+    .screen-mobile h3{
+        font-family: verdana;
+        font-weight: bold;
+        color: #d1000e;
+        text-align: center;
+    }
+}

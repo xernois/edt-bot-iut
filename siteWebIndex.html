@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="siteWebstyle.css">
+    <title>Lecteur d'Emploi du Temps</title>
+</head>
+<body>
+    <div class="screen-mobile">
+        <h2>Le site n'est pas accessible dans ce format d'écran</h2>
+        <h3> Ouch :/</h3>
+    </div>
+    <header>
+        <h1 class="titre">Lecteur d'Emploi du Temps</h1>
+    </header>
+    <div id="container">
+        <label for="semaine-select">Semaine</label>
+        <select name="semaines" id="semaine-select">
+            <option value="-1">Semaine</option>
+            <option value="1">Semaine 1</option>
+            <option value="2">Semaine 2</option>
+            <option value="3">Semaine 3</option>
+            <option value="4">Semaine 4</option>
+            <option value="5">Semaine 5</option>
+            <option value="6">Semaine 6</option>
+            <option value="7">Semaine 7</option>
+            <option value="8">Semaine 8</option>
+            <option value="9">Semaine 9</option>
+            <option value="10">Semaine 10</option>
+
+            <option value="11">Semaine 11</option>
+            <option value="12">Semaine 12</option>
+            <option value="13">Semaine 13</option>
+            <option value="14">Semaine 14</option>
+            <option value="15">Semaine 15</option>
+            <option value="16">Semaine 16</option>
+            <option value="17">Semaine 17</option>
+            <option value="18">Semaine 18</option>
+            <option value="19">Semaine 19</option>
+            <option value="20">Semaine 20</option>
+            <option value="21">Semaine 21</option>
+            <option value="22">Semaine 22</option>
+            <option value="23">Semaine 23</option>
+            <option value="24">Semaine 24</option>
+            <option value="25">Semaine 25</option>
+            <option value="26">Semaine 26</option>
+            <option value="27">Semaine 27</option>
+            <option value="28">Semaine 28</option>
+            <option value="29">Semaine 29</option>
+            <option value="30">Semaine 30</option>
+
+            <option value="31">Semaine 31</option>
+            <option value="32">Semaine 32</option>
+            <option value="33">Semaine 33</option>
+            <option value="34">Semaine 34</option>
+            <option value="35">Semaine 35</option>
+        </select>
+
+        <label for="groupe-select">Groupe</label>
+        <select name="groupes" id="groupe-select">
+            <option value="-1">Groupe</option>
+            <option value="G1A">G1A</option>
+            <option value="G1B">G1B</option>
+            <option value="G2A">G2A</option>
+            <option value="G2B">G2B</option>
+            <option value="G3A">G3A</option>
+            <option value="G3B">G3B</option>
+            <option value="G4A">G4A</option>
+            <option value="G4B">G4B</option>
+            <option value="G5A">G5A</option>
+            <option value="G5B">G5B</option>
+            <option value="L1A">L1A</option>
+            <option value="L1B">L1B</option>
+        </select>
+
+        <label for="jour-select">Jour</label>
+        <select name="jours" id="jour-select">
+            <option value="-1">Jour</option>
+            <option value="Lundi">Lundi</option>
+            <option value="Mardi">Mardi</option>
+            <option value="Mercredi">Mercredi</option>
+            <option value="Jeudi">Jeudi</option>
+            <option value="Vendredi">Vendredi</option>
+            <option value="Samedi">Samedi</option>
+        </select>
+        <input class="favorite styled" type="button" value="Valider" onclick="requeter()">
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="2" id="entete">Emploi du temps</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>8h00</td>
+                    <td id="0"></td>
+                </tr>
+                <tr>
+                    <td>8h30</td>
+                    <td id="1"></td>
+                </tr>
+                <tr>
+                    <td>9h00</td>
+                    <td id="2"></td>
+                </tr>
+                <tr>
+                    <td>9h30</td>
+                    <td id="3"></td>
+                </tr>
+                <tr>
+                    <td>10h00</td>
+                    <td id="4"></td>
+                </tr>
+                <tr>
+                    <td>10h30</td>
+                    <td id="5"></td>
+                </tr>
+                <tr>
+                    <td>11h00</td>
+                    <td id="6"></td>
+                </tr>
+                <tr>
+                    <td>12h30</td>
+                    <td id="7"></td>
+                </tr>
+                <tr>
+                    <td>13h00</td>
+                    <td id="8"></td>
+                </tr>
+                <tr>
+                    <td>13h30</td>
+                    <td id="9"></td>
+                </tr>
+                <tr>
+                    <td>14h00</td>
+                    <td id="10"></td>
+                </tr>
+                <tr>
+                    <td>14h30</td>
+                    <td id="11"></td>
+                </tr>
+                <tr>
+                    <td>15h00</td>
+                    <td id="12"></td>
+                </tr>
+                <tr>
+                    <td>15h30</td>
+                    <td id="13"></td>
+                </tr>
+                <tr>
+                    <td>16h00</td>
+                    <td id="14"></td>
+                </tr>
+                <tr>
+                    <td>16h30</td>
+                    <td id="15"></td>
+                </tr>
+                <tr>
+                    <td>17h00</td>
+                    <td id="16"></td>
+                </tr>
+                <tr>
+                    <td>17h30</td>
+                    <td id="17"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <div id="bas-page"> 
+            <h3><a href="mentionsLegales.html">Mentions légales</a>  · © Copyright</h3>
+        </div>
+    </footer>
+    <script>
+        function callBackgetSuccess(){
+
+        }
+        function requeter(){
+            var annee;
+            var selectSemaine = document.getElementById("semaine-select");
+            var valeurSemaine = selectSemaine.options[selectSemaine.selectedIndex].value;
+
+            var selectGroupe = document.getElementById("groupe-select");
+            var valeurGroupe = selectGroupe.options[selectGroupe.selectedIndex].value;
+
+            var selectJour = document.getElementById("jour-select");
+            var valeurJour = selectJour.options[selectJour.selectedIndex].value;
+
+            console.log(valeurSemaine, valeurGroupe, valeurJour)
+            if (valeurGroupe != -1){
+                if (valeurGroupe=="G1A" || valeurGroupe=="G1B" ||
+                valeurGroupe=="G2A" || valeurGroupe=="G2B" ||
+                 valeurGroupe=="G3A"|| valeurGroupe=="G3B" ){
+                    annee = 1
+                }
+                if (valeurGroupe=="G4A" || valeurGroupe=="G4B" ||
+                valeurGroupe=="G5A" || valeurGroupe=="G5B"){
+                    annee = 2
+                }
+                if (valeurGroupe=="L1A" || valeurGroupe=="L1B"){
+                    annee = 3
+                }
+                var url = "http://109.220.5.61/api/edt/a"+annee+"?s="+valeurSemaine;
+                const requete = new XMLHttpRequest()
+                console.log(url)
+                const methodeHttp = "GET"
+                requete.open(methodeHttp, url)
+                requete.onreadystatechange = function(){
+                    if(requete.readyState === 4 && requete.status === 200){
+                        requete.responseText
+                        edt = JSON.parse(this.response)
+                        console.log(edt[valeurGroupe][valeurJour]["Cours"])
+                        for (i =0; i<=17;i++){
+                            idheure = document.getElementById(i)
+                            idheure.innerHTML = "<p>"+edt[valeurGroupe][valeurJour]["Cours"][i][0] +" | "+edt[valeurGroupe][valeurJour]["Cours"][i][1]+"</p>"
+                        }
+                        
+                    }
+                }
+                requete.send()
+            }
+
+            
+        }
+
+    </script>
+</body>
+</html>
