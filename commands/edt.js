@@ -1,20 +1,26 @@
 const Discord = require("discord.js");
-const derniereSemaine = require("../utilities/flexConf.json").derniereSemaine;
 const edtFetch = require("../utilities/edtFetch.js");
+const derniereSemaine = require("../utilities/flexConf.json").derniereSemaine;
 
 module.exports.run = async (_client, message, args) => {
 
-  const groupe = args.shift();
-  
-  let semaine = derniereSemaine;
-  if(args.length == 1){
-    semaine = args.shift();
-  }
-    if(groupe.substr(1,1) == 1 || groupe.substr(1,1) == 2 || groupe.substr(1,1) == 3){
-        annee(message, 1, groupe, semaine);
+    if(args.length){
+        const groupe = args.shift();
+        let semaine = derniereSemaine;
+
+        if(args.length == 1){
+          semaine = args.shift();
+        }
+
+        if(groupe.substr(1,1) == 1 || groupe.substr(1,1) == 2 || groupe.substr(1,1) == 3){
+            annee(message, 1, groupe, semaine);
+        }
+        else if (groupe.substr(1,1) == 4 || groupe.substr(1,1) == 5){
+            annee(message, 2, groupe, semaine);
+        }
     }
-    else if (groupe.substr(1,1) == 4 || groupe.substr(1,1) == 5){
-        annee(message, 2, groupe, semaine);
+    else{
+        message.channel.send("Erreur : Il n'y a pas d'arguments");
     }
 };
 
@@ -30,10 +36,6 @@ function groupCheck(groupe, groups) {
     }
     return false;
 }
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
   
 async function annee(message, annee, groupe, semaine){
     edt = await edtFetch(annee, groupe, semaine)
