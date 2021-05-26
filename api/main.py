@@ -366,13 +366,12 @@ def engine(edtImage, niveau):
         ecriture.ecrire(edt3, edtImage.split(".jpg")[0]+".json")
 
 def main(edtImage):
-    name = edtImage.split("\\")[len(edtImage.split("\\")) - 1].split("_")
-    #print (name[0])
-    if name[0] == "A1":
+    name = edtImage.split("\\")[len(edtImage.split("\\")) - 1].split("_")[0].split("/")[1]
+    if name == "A1":
         engine(edtImage, "A1")
-    if name[0] == "A2":
+    if name == "A2":
         engine(edtImage, "A2")
-    if name[0] == "A3":
+    if name == "A3":
         engine(edtImage, "A3")
 
 ##main("A1_S28.jpg")

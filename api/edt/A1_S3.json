@@ -119,7 +119,7 @@
           ""
         ],
         [
-          "M1204FoctioorgaisRouae",
+          "M1204FoctioorgaisRouaeao",
           "CM"
         ],
         [
@@ -431,7 +431,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TD"
         ],
         [
@@ -483,7 +483,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatAA",
+          "M1203EviroécooBaulatAA",
           "CM"
         ],
         [
@@ -495,7 +495,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAA",
+          "M1201MathérdiscréteFettahi_ret",
           "CM"
         ],
         [
@@ -685,7 +685,7 @@
           "TP"
         ],
         [
-          "M",
+          "TM",
           "TP"
         ],
         [
@@ -697,7 +697,7 @@
           ""
         ],
         [
-          "M1204FoctioorgaisRouae",
+          "M1204FoctioorgaisRouaeao",
           "CM"
         ],
         [
@@ -1009,7 +1009,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TD"
         ],
         [
@@ -1061,7 +1061,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatAA",
+          "M1203EviroécooBaulatAA",
           "CM"
         ],
         [
@@ -1073,7 +1073,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAA",
+          "M1201MathérdiscréteFettahi_ret",
           "CM"
         ],
         [
@@ -1223,7 +1223,7 @@
           "TD"
         ],
         [
-          "MR50",
+          "M",
           "TD"
         ],
         [
@@ -1275,8 +1275,8 @@
           ""
         ],
         [
-          "M1204FoctioorgaisRouae",
-          "CM"
+          "",
+          ""
         ],
         [
           "",
@@ -1315,7 +1315,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TP"
         ],
         [
@@ -1639,7 +1639,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatAA",
+          "M1203EviroécooBaulatAA",
           "CM"
         ],
         [
@@ -1651,7 +1651,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAA",
+          "M1201MathérdiscréteFettahi_ret",
           "CM"
         ],
         [
@@ -1801,7 +1801,7 @@
           "TD"
         ],
         [
-          "MR50",
+          "M",
           "TD"
         ],
         [
@@ -1853,7 +1853,7 @@
           ""
         ],
         [
-          "M1204FoctioorgaisRouae",
+          "M1204FoctioorgaisRouaeao",
           "CM"
         ],
         [
@@ -2141,7 +2141,7 @@
           "TP"
         ],
         [
-          "IM",
+          "M",
           "TP"
         ],
         [
@@ -2217,10 +2217,6 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatAA",
-          "CM"
-        ],
-        [
           "",
           ""
         ],
@@ -2229,7 +2225,11 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAA",
+          "",
+          ""
+        ],
+        [
+          "M1201MathérdiscréteFettahi_ret",
           "CM"
         ],
         [
@@ -2795,20 +2795,20 @@
     "Samedi": {
       "Cours": [
         [
-          "",
-          ""
-        ],
-        [
-          "",
-          ""
-        ],
-        [
-          "",
-          ""
-        ],
-        [
-          "M1201MathémdiscreteFettahiAA",
+          "M1203EviroécooBaulatAA",
           "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
         ],
         [
           "",
@@ -3009,7 +3009,7 @@
           ""
         ],
         [
-          "M1204FoctioorgaisRouae",
+          "M1204FoctioorgaisRouaeao",
           "CM"
         ],
         [
@@ -3305,7 +3305,7 @@
           ""
         ],
         [
-          "Mt206",
+          "M1206",
           "TP"
         ],
         [
@@ -3373,7 +3373,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatAA",
+          "M1203EviroécooBaulatAA",
           "CM"
         ],
         [
@@ -3385,7 +3385,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAA",
+          "M1201MathérdiscréteFettahi_ret",
           "CM"
         ],
         [

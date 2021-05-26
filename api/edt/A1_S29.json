@@ -123,7 +123,7 @@
           ""
         ],
         [
-          "M2203Evirocomptajuridiqu",
+          "M2203Evirocomptajuridiquacs",
           "CM"
         ],
         [
@@ -395,7 +395,7 @@
           ""
         ],
         [
-          "M2204",
+          "M2201",
           "CM"
         ],
         [
@@ -701,7 +701,7 @@
           ""
         ],
         [
-          "M2203Evirocomptajuridiqu",
+          "M2203Evirocomptajuridiquacs",
           "CM"
         ],
         [
@@ -973,7 +973,7 @@
           ""
         ],
         [
-          "M2204",
+          "M2201",
           "CM"
         ],
         [
@@ -1279,7 +1279,7 @@
           ""
         ],
         [
-          "M2203Evirocomptajuridiqu",
+          "M2203Evirocomptajuridiquacs",
           "CM"
         ],
         [
@@ -1551,7 +1551,7 @@
           ""
         ],
         [
-          "M2204",
+          "M2201",
           "CM"
         ],
         [
@@ -1845,10 +1845,6 @@
           ""
         ],
         [
-          "M2204",
-          "CM"
-        ],
-        [
           "",
           ""
         ],
@@ -1857,7 +1853,11 @@
           ""
         ],
         [
-          "M2203Evirocomptajuridiqu",
+          "",
+          ""
+        ],
+        [
+          "M2203Evirocomptajuridiquacs",
           "CM"
         ],
         [
@@ -2129,7 +2129,7 @@
           ""
         ],
         [
-          "M2204",
+          "M2201",
           "CM"
         ],
         [
@@ -2435,7 +2435,7 @@
           ""
         ],
         [
-          "M2203Evirocomptajuridiqu",
+          "M2203Evirocomptajuridiquacs",
           "CM"
         ],
         [
@@ -2603,7 +2603,7 @@
     "Jeudi": {
       "Cours": [
         [
-          "M2201",
+          "M2201$",
           "TD"
         ],
         [
@@ -2707,7 +2707,7 @@
           ""
         ],
         [
-          "M2204",
+          "M2201",
           "CM"
         ],
         [
@@ -3013,7 +3013,7 @@
           ""
         ],
         [
-          "M2203Evirocomptajuridiqu",
+          "M2203Evirocomptajuridiquacs",
           "CM"
         ],
         [
@@ -3181,7 +3181,7 @@
     "Jeudi": {
       "Cours": [
         [
-          "M2201",
+          "M2201$",
           "TD"
         ],
         [
@@ -3285,7 +3285,7 @@
           ""
         ],
         [
-          "M2204",
+          "M2201",
           "CM"
         ],
         [

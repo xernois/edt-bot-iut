@@ -431,7 +431,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TD"
         ],
         [
@@ -483,7 +483,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatY",
+          "M1203EviroécooBaulatAD",
           "CM"
         ],
         [
@@ -495,7 +495,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAD",
+          "M1201MathérdiscréteFettahi_AD",
           "CM"
         ],
         [
@@ -597,7 +597,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TP"
         ],
         [
@@ -773,7 +773,7 @@
     "Mercredi": {
       "Cours": [
         [
-          "M1201",
+          "M1201$",
           "TP"
         ],
         [
@@ -1009,7 +1009,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TD"
         ],
         [
@@ -1061,7 +1061,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatY",
+          "M1203EviroécooBaulatAD",
           "CM"
         ],
         [
@@ -1073,7 +1073,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAD",
+          "M1201MathérdiscréteFettahi_AD",
           "CM"
         ],
         [
@@ -1395,7 +1395,7 @@
           ""
         ],
         [
-          "M1204",
+          "M1201",
           "TD"
         ],
         [
@@ -1639,7 +1639,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatY",
+          "M1203EviroécooBaulatAD",
           "CM"
         ],
         [
@@ -1651,7 +1651,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAD",
+          "M1201MathérdiscréteFettahi_AD",
           "CM"
         ],
         [
@@ -1765,8 +1765,8 @@
           ""
         ],
         [
-          "M1206",
-          "TP"
+          "",
+          ""
         ],
         [
           "",
@@ -1949,7 +1949,7 @@
           "TP"
         ],
         [
-          "5M",
+          "IM",
           "TP"
         ],
         [
@@ -1973,7 +1973,7 @@
           ""
         ],
         [
-          "M1204",
+          "M1201",
           "TD"
         ],
         [
@@ -2217,10 +2217,6 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatY",
-          "CM"
-        ],
-        [
           "",
           ""
         ],
@@ -2229,7 +2225,11 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAD",
+          "",
+          ""
+        ],
+        [
+          "M1201MathérdiscréteFettahi_AD",
           "CM"
         ],
         [
@@ -2315,7 +2315,7 @@
     "Lundi": {
       "Cours": [
         [
-          "M1104",
+          "M1101",
           "TP"
         ],
         [
@@ -2427,8 +2427,8 @@
           ""
         ],
         [
-          "",
-          ""
+          "M1102",
+          "CM"
         ],
         [
           "",
@@ -2471,7 +2471,7 @@
           ""
         ],
         [
-          "M1204S",
+          "M1204",
           "TD"
         ],
         [
@@ -2795,20 +2795,20 @@
     "Samedi": {
       "Cours": [
         [
-          "",
-          ""
-        ],
-        [
-          "",
-          ""
-        ],
-        [
-          "",
-          ""
-        ],
-        [
-          "M1201MathémdiscreteFettahiAD",
+          "M1203EviroécooBaulatAD",
           "CM"
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
+        ],
+        [
+          "",
+          ""
         ],
         [
           "",
@@ -3049,7 +3049,7 @@
           ""
         ],
         [
-          "M1204S",
+          "M1204",
           "TD"
         ],
         [
@@ -3101,7 +3101,7 @@
           ""
         ],
         [
-          "M1104",
+          "M1101",
           "TP"
         ],
         [
@@ -3373,7 +3373,7 @@
     "Samedi": {
       "Cours": [
         [
-          "M1203EviroécoomBaulatY",
+          "M1203EviroécooBaulatAD",
           "CM"
         ],
         [
@@ -3385,7 +3385,7 @@
           ""
         ],
         [
-          "M1201MathémdiscreteFettahiAD",
+          "M1201MathérdiscréteFettahi_AD",
           "CM"
         ],
         [

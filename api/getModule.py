@@ -1,6 +1,6 @@
 from PIL import Image
 import pytesseract
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract' #IMPORTANT Appel le chemin pour la librairie pytesseract
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract' #IMPORTANT Appel le chemin pour la librairie pytesseract
 
 numeroModule = ["M1102","M1103","M3103","M1101","M2101","M2102","M3101","M3102","M4101C","M4102C","M1105","M3104","M4103C","M4104C","M1104","2106","M3106","M2103","M2104","M2105","M2204","M3105","M3301","M4102C","M4105C","M1201","M1202","M2201","M2202","M3201","M3202C","M4202C","M1203","M1204","M2203","M2204","M3203","M3301","M4201C","M1105","M1205","M2205","M3205","M4203","M1206","M2206","M3206","M4204"]
 
