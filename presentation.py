@@ -16,6 +16,7 @@ class IHM:
         taille = (str(LARGEUR)+"x"+str(HAUTEUR)+"+"+str(POSITION_X)+"+"+str(POSITION_Y))
         self.fenetre.geometry(taille)
         self.fenetre.resizable(False, False)
+        self.fenetre.iconphoto(False, PhotoImage(file='./favicon.png'))
     
     def creationWidget(self):
         txtFont = ("Calibri", 18, "bold")
@@ -71,46 +72,53 @@ class IHM:
         self.edt.place(x=0,y=0)
 
     def erreurParametre(self, typeError):
+        erreurTrouve = False
         if typeError == "saisi":
-            self.labelErreurParametre.config(text="Saisi des parametres invalides")
-            self.labelErreurParametre.place(x=15,y=107)
+            self.labelErreurParametre.config(text="Parametres invalides")
+            self.labelErreurParametre.place(x=25,y=107)
+            erreurTrouve = True
         if typeError == "incomplet":
-            self.labelErreurParametre.config(text="Saisi des parametres incompletes")
-            self.labelErreurParametre.place(x=10,y=107)
+            self.labelErreurParametre.config(text="Parametres incompletes")
+            self.labelErreurParametre.place(x=25,y=107)
+            erreurTrouve = True
         if typeError == "":
             self.labelErreurParametre.config(text="")
             self.majTitre()
-            edt15214 = donnees.lecteurEDT(donnees.data["codeSemaine"], self.getIndice())
+            edt15214 = donnees.lecteurEDT(donnees.data["groupe"].index(self.getGroupe()), donnees.data["semaine"].index(self.getSemaine()))
 
         try:
             edt15214[self.getGroupe()]
             erreur = False
         except:
+            if not (erreurTrouve):
+                self.labelErreurParametre.config(text="EDT introuvable")
+                self.labelErreurParametre.place(x=25,y=107)
+                erreurTrouve = True
             erreur = True
 
         font = ("Calibri", 14)
         if not erreur:
             if (edt15214!=False):
-                self.lbheure1.config(text=self.afficheModule(0), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure2.config(text=self.afficheModule(1), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure3.config(text=self.afficheModule(2), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure4.config(text=self.afficheModule(3), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure5.config(text=self.afficheModule(4), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure6.config(text=self.afficheModule(5), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure7.config(text=self.afficheModule(6), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure8.config(text=self.afficheModule(7), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure9.config(text=self.afficheModule(8), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure10.config(text=self.afficheModule(9), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure11.config(text=self.afficheModule(10), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure12.config(text=self.afficheModule(11), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure13.config(text=self.afficheModule(12), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure14.config(text=self.afficheModule(13), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure15.config(text=self.afficheModule(14), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure16.config(text=self.afficheModule(15), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure17.config(text=self.afficheModule(16), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure18.config(text=self.afficheModule(17), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure19.config(text=self.afficheModule(18), font=font, background="#fff", foreground="#0a385a" )
-                self.lbheure20.config(text=self.afficheModule(19), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure1.config(text=self.afficheModule(0,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure2.config(text=self.afficheModule(1,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure3.config(text=self.afficheModule(2,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure4.config(text=self.afficheModule(3,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure5.config(text=self.afficheModule(4,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure6.config(text=self.afficheModule(5,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure7.config(text=self.afficheModule(6,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure8.config(text=self.afficheModule(7,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure9.config(text=self.afficheModule(8,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure10.config(text=self.afficheModule(9,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure11.config(text=self.afficheModule(10,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure12.config(text=self.afficheModule(11,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure13.config(text=self.afficheModule(12,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure14.config(text=self.afficheModule(13,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure15.config(text=self.afficheModule(14,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure16.config(text=self.afficheModule(15,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure17.config(text=self.afficheModule(16,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure18.config(text=self.afficheModule(17,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure19.config(text=self.afficheModule(18,edt15214), font=font, background="#fff", foreground="#0a385a" )
+                self.lbheure20.config(text=self.afficheModule(19,edt15214), font=font, background="#fff", foreground="#0a385a" )
             else:
                 self.labelErreurParametre.config(text="Parametre(s) un correct")
                 self.labelErreurParametre.place(x=25,y=107)
@@ -135,11 +143,12 @@ class IHM:
             self.lbheure18.config(text="", background="#fff")
             self.lbheure19.config(text="", background="#fff")
             self.lbheure20.config(text="", background="#fff")
-            self.labelErreurParametre.config(text="Parametre(s) un correct")
-            self.labelErreurParametre.place(x=25,y=107)
+            if (not erreurTrouve):
+                self.labelErreurParametre.config(text="Parametre(s) un correct")
+                self.labelErreurParametre.place(x=25,y=107)
             
-    def afficheModule(self, index):
-        edt15214 = donnees.lecteurEDT(donnees.data["codeSemaine"], self.getIndice())
+    def afficheModule(self, index, edt15214):
+        
         if str(edt15214[self.getGroupe()][self.getJour()]["Cours"][index][0]) != "":
             return donnees.data["heure"][index]+" - "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][index][1])+" | "+str(edt15214[self.getGroupe()][self.getJour()]["Cours"][index][0])
         else:

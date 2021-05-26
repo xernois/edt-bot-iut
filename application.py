@@ -10,7 +10,6 @@ class Application:
     def validationMenu(self):
         semaineValide, jourValide, groupeValide, erreurSaisi = False, False, False, ""
         if ((self.__semaine() == "Numero de la Semaine") or (self.__jour() == "Jour") or (self.__groupe() == "Nom du Groupe")):
-            erreurSaisi = "incomplet"
             return ("incomplet")
         else:
             for i in donnees.data["semaine"]:
@@ -28,17 +27,7 @@ class Application:
                     groupeValide = True
                     break
             if ((not semaineValide) or (not jourValide) or (not groupeValide)):
-                erreurSaisi = "saisi"
                 return ("saisi")
-        erreurSaisi = ""
         return ("")
     
-    def generationEdt(self, edt):
-        posY = 25
-        indice = 0
-        font = ("Calibri", 14)
-        for i in donnees.data["heure"]:
-            posY += 20
-            lbheure = ttk.Label(text=donnees.data["heure"][indice]+" - "+edt[self.presentation.IHM.getGroupe()][self.presentation.IHM.getJour()]["Cours"][indice], font=font, background="#fff", foreground="#0a385a" )
-            lbheure.place(x=100, y=posY)
-            indice += 1
+    
