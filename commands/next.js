@@ -61,12 +61,15 @@ module.exports.conf = {
     argsAllowed: 1,
 };
 
+
+/////////////////////* Méthode de Sakamoto  : https://en.wikipedia.org/wiki/Determination_of_the_day_of_the_week#Implementation-dependent_methods_of_Sakamoto.2C_Lachman.2C_Keith_and_Craver*/////////////////
 function dayofweek(d, m, y)
 {
     let t = [ 0, 3, 2, 5, 0, 3, 5, 1, 4, 6, 2, 4 ];
     y -= (m < 3) ? 1 : 0;
-    return ( y + y/4 - y/100 + y/400 + t[m-1] + d) % 7;
+    return ( y + d + y/4 - y/100 + y/400  + t[m-1]) % 7 ;
 }
+/////////////////////////////////////////////////////////////////////////////
 
 function groupCheck(groupe, groups) {
     const a = groupe.substr(1,1);

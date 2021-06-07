@@ -35,16 +35,17 @@ eventLoader();
 async function commandLoader(dir = "./commands") {
   console.log(`=======| Loading Commands |=========`);
   const files = await fs.readdir(path.join(__dirname, dir));
-  for (const file of files) {
+  for (const file of files) {  //Vérification de chaque fichier dans le dossier actuel
     const status = await fs.lstat(path.join(__dirname, dir, file));
-    if (status.isDirectory()) {
+    if (status.isDirectory()) {  // Si le fichier est un dossier
       await commandLoader(path.join(__dirname, dir));
-    } else if (file.endsWith(".js")) {
-      try {
+    } else if (file.endsWith(".js")) {  //Si c'est un fichier Javascript
+      try {                            // Essaie d'effectuer ce qui suit sinon, affiche un message d'erreur
         const cmdMod = require(path.join(__dirname, dir, file));
-        if (cmdMod.conf && cmdMod.conf.name) {
+        if (cmdMod.conf && cmdMod.conf.name) { // Si le fichier possède une configuration et un nom
           console.log(`${cmdMod.conf.name} loaded successfully`);
           client.commands.set(cmdMod.conf.name, cmdMod);
+
         }
       } catch (err) {
         console.error(`Error : ${err}`);
