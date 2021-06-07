@@ -14,9 +14,6 @@ module.exports.run = async(_client, message, args) => {
     let hour = date.getHours();
     let minutes = date.getMinutes();
     
-
-    console.log(`Jour : ${days[Math.floor(dow)]}`);
-
     if(args.length){
         const groupe = args.shift();
         let semaine = derniereSemaine;
@@ -25,26 +22,22 @@ module.exports.run = async(_client, message, args) => {
           semaine = args.shift();
         }
 
-        hour >= 19 ? days = days[Math.floor(dow)] + 1 : days = days[Math.floor(dow)];
+        hour >= 19 ? days = days[Math.floor(dow) + 1] : days = days[Math.floor(dow)];
 ;
         if(groupe.substr(1,1) == 1 || groupe.substr(1,1) == 2 || groupe.substr(1,1) == 3){
-            annee(message, 1, groupe, semaine, days[Math.floor(dow)], hour);
+            annee(message, 1, groupe, semaine, days, hour, minutes);
         }
         else if (groupe.substr(1,1) == 4 || groupe.substr(1,1) == 5){
-            annee(message, 2, groupe, semaine, days[Math.floor(dow)], hour);
+            annee(message, 2, groupe, semaine, days, hour, minutes);
         }
     }
     else{
         message.channel.send("Erreur : Il n'y a pas d'arguments");
     }
-    
-    
-    
-    //!next G1A
-    
+        
 };
 
-async function hourFinder(hour, minutes){
+function hourFinder(hour, minutes){
     let next_hour = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
     num = (hour - 8)*2;
     if(minutes >= 30){
@@ -78,20 +71,24 @@ function groupCheck(groupe, groups) {
     }
     return false;
 }
-  
-async function annee(message, annee, groupe, semaine, jour, hour){
+
+async function annee(message, annee, groupe, semaine, jour, hour, minutes){
+    let prochaineHeure = ["8h00", "8h30", "9h00", "9h30", "10h00", "10h30", "11h00", "11h30", "12h00", "12h30", "13h00", "13h30", "14h00", "14h30", "15h00", "15h30", "16h00", "16h30", "17h00", "17h30", "18h00", "18h30", "19sh00"]
     edt = await edtFetch(annee, groupe, semaine)
         .then((response) => response.json())
         .then((response) => {return response});
     try{
         if(edt.hasOwnProperty('code')){
             message.channel.send(`Èrreur ${edt.code} : ${edt.message}`)
-            console.log(`Èrreur ${edt.code} : ${edt.message}`);
+            console.log(`Erreur ${edt.code} : ${edt.message}`);
             return;
         }
         let cours = [];
+
         edt[jour].Cours.forEach(element => cours.push(element));
-        message.channel.send(cours[hourFinder]);
+
+        message.channel.send(`Prochain cours : ${cours[hourFinder(hour, minutes)]} à ${prochaineHeure[hourFinder(hour, minutes)]}`);
+
     }
     catch(err){
         console.error(err);
