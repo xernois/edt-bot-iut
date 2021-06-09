@@ -1,0 +1,177 @@
+=======| Loading Commands |=========
+message has loaded successfully
+create loaded successfully
+ready has loaded successfully
+edt loaded successfully
+help loaded successfully
+next loaded successfully
+prefix loaded successfully
+rolePing loaded successfully
+set loaded successfully
+setup loaded successfully
+site loaded successfully
+status loaded successfully
+=======| Commands have been loaded |========
+EDT-IUT v^0.6.0b bot has been launched successfully
+===========================================================
+0
+0
+0
+0
+{ Lundi:
+   { Cours:
+      [ [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array] ] },
+  Mardi:
+   { Cours:
+      [ [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array] ] },
+  Mercredi:
+   { Cours:
+      [ [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array] ] },
+  Jeudi:
+   { Cours:
+      [ [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array] ] },
+  Vendredi:
+   { Cours:
+      [ [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array] ] },
+  Samedi:
+   { Cours:
+      [ [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array],
+        [Array] ] } }
+0
+Jour : Mardi
+Èrreur 400 : Edt non indisponible
+Jour : Mardi
+TypeError: Cannot read property 'Cours' of undefined
+    at annee (/home/pi/edt-bot-iut/bot/commands/next.js:90:19)
+    at process._tickCallback (internal/process/next_tick.js:68:7)
