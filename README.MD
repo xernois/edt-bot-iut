@@ -31,11 +31,11 @@ Afin de préparer le terrain pour notre future [projet tuteuré](#II), nous avon
 
 Le composant principal est le Raspberry Pi. Un micro-ordinateur condensé en une seule et unique carte, non plus grande qu’une carte à jouer. Le Raspberry Pi est très accessible par son prix, bien moins chère qu’un ordinateur classique. Il permet de créer divers système à moindre coût. Il est possible d’ajouter des composants supplémentaires au micro-ordinateur. Depuis ses débuts, il y a eu plusieurs versions de Raspberry Pi : Pi 2, Pi 3, Pi Zero, Pi 4, et plus récemment le Raspberry Pi 400 inclut dans un clavier et vendu comme un vrai ordinateur.
 
-![figure 2: Raspberry Pi 400](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig2.JPG)
+![figure 2: Raspberry Pi 400](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig2.jpg)
 
 Le Raspberry Pi étant un micro-ordinateur, il nécessite l’installation d’un système d’exploitation. Le choix du système est libre : Pidora, Arch linux, Debian ou encore Windows 10 IOT. Dans notre cas, nous utiliserons le système d’exploitation Raspberry Pi OS anciennement Raspbian.
 
-![figure 3: Bureau Raspberry Pi OS](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig3.JPG)
+![figure 3: Bureau Raspberry Pi OS](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig3.jpg)
 
 
 ##### [Retour au sommaire](#sommaire)
@@ -44,21 +44,21 @@ Le Raspberry Pi étant un micro-ordinateur, il nécessite l’installation d’u
 Pour l’installation, notre équipe c’est rejoint à l’IUT. Cette étape commence par télécharger le système d’exploitation et de l’installer sur une carte SD, nous servant de mémoire. La carte SD fait 8go, ce qui est très convenable pour l’utilisation que nous allons en faire. Le logiciel Raspberry Pi Imager nous a permis d’installer le système sur notre carte SD.
 
 
-![figure 4: Interface Raspberry PI Imager](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig4.JPG)
+![figure 4: Interface Raspberry PI Imager](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig4.jpg)
 
 Cette phase d’installation faite, nous avons connecté le Raspberry Pi à un moniteur branché en HDMI, et nous avons lancé la machine.
 
-![figure 5: Démarrage du micro-ordinateur](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig5.JPG)
+![figure 5: Démarrage du micro-ordinateur](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig5.jpg)
 
 Quelques paramétrages étaient nécessaires comme changer la reconnaissance du clavier. Notre clavier français dit « AZERTY » était reconnu par défaut comme un clavier américain dit « QWERTY ».
 
 Nous devions prendre par la suite le Raspberry Pi à distance. Pour se faire nous avons utilisé un programme informatique et protocole de communication sécurisé. C’est le Secure Shell ou SSH. Nous récupérons l’adresse IP local du Raspberry Pi, que nous avons saisi depuis une autre machine connecté sur le même réseau.
 
-![figure 6: Prise du Raspberry PI à distance via le SSH](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig6.JPG)
+![figure 6: Prise du Raspberry PI à distance via le SSH](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig6.jpg)
 
 Durant l’installation nous nous sommes confrontés à deux problèmes. Tout d’abord pour connecter notre micro-ordinateur au moniteur, nous avions utilisé un câble VGA qui visiblement n’était pas compatible avec notre machine. Le second problème, a été la configuration du SSH. Nous avons pris de longue minutes avant de comprendre pourquoi le Raspberry nous refusait la connexion. La machine nous ressortait un message d’erreur nous refusant l’accès. Finalement, il suffisait d’autoriser le SSH dans les paramètres du système d’exploitation du Raspberry Pi
 
-![figure 7: Message d'erreur pour le refus de la prise en SSH](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig7.JPG)
+![figure 7: Message d'erreur pour le refus de la prise en SSH](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig7.jpg)
 
 ##### [Retour au sommaire](#sommaire)
 ## 1.3 - Installation de python et tests <a id="I3"></a> 
@@ -67,7 +67,7 @@ Après vérification les versions python 3 et python 2 étaient préalablement i
 
 Afin de vérifier si tout fonctionne correctement, nous avons utilisé un programme archive qu’un des membres du groupe a fait il y a quelques années. Le programme chiffre un message avec la méthode de [Vigenère](#Glossaire)
 
-![figure 8: Capture d'écran du programme de chiffrement de Vigenère](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig8.JPG)
+![figure 8: Capture d'écran du programme de chiffrement de Vigenère](https://github.com/xernois/edt-bot-iut/blob/master/images-RM/fig8.jpg)
 
 Pour continuer, nous avons développé un petit jeu plutôt connu. Le jeu du plus ou moins. Dans notre programme l’utilisateur joue contre l’ordinateur en essayant de trouver le nombre secret auquel pense l’ordinateur. Le nombre en question est compris dans l’intervalle que saisi l’utilisateur. À chaque fois, l’utilisateur propose un nombre et l’ordinateur lui indique si le nombre secret est inférieur ou supérieur. Le nombre de question pour trouver l’inconnu est défini par l’utilisateur dans le menu avec le choix *option*. Le jeu est entièrement paramétrable.
 
