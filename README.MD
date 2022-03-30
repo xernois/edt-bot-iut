@@ -3,7 +3,7 @@
 ### par 
 ### BAURI Antoine | DRON Jérémy | RATEL Alexandre
 ### Etudiants en DUT informatique à l'IUT du Limousin (2020 - 2021)
-*Le projet tuteuré étant terminné, certains liens ne sont plus accessible*
+*Le projet tuteuré étant terminé, certains liens ne sont plus accessible*
 
 # Sommaire  <a id="sommaire"></a> 
 - [I.Prérequis et configuration](#I)
